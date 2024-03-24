@@ -1,0 +1,45 @@
+title: leehoseok
+description: >-
+  반갑습니다.<br>
+  이호석입니다.
+url: "https://lhseok.github.io"
+baseurl: "/"
+github: lhseok
+email: lhseok0228@gmail.com
+google_analytics: ""
+
+exclude: [README.md, Gemfile, Gemfile.lock]
+
+comments:
+  enabled: true
+  repo: "REPO_COMMENTS_PATH"
+  issue-term: pathname
+
+collections:
+  pages:
+    output: true
+  projects:
+    output: true
+  tags:
+    output: true
+
+defaults:
+  - scope:
+      type: pages
+    values:
+      layout: default
+  - scope:
+      type: posts
+    values:
+      layout: post
+      permalink: /blog/:title
+  - scope:
+      type: projects
+    values:
+      layout: project
+      permalink: /projects/:title
+  - scope:
+      type: tags
+    values:
+      layout: tag
+      permalink: /tags/:title
