@@ -1,11 +1,11 @@
 ---
 title: 위메프
 description: 2013.07 - 2019.12 (6년 6개월)
-image: wemap1.jpg
+image: wemap0.jpg
 date: 2013-07-08
 ---
 
-[![link](/assets/images/projects/wemap2.jpg)][app link]
+[![link](/assets/images/projects/wemap1.jpg)][app link]
 2013년 소셜커머스 3사가 한창 경쟁구도일 때, 당시 2등이었던 위메프를 선택하였고
 1등인 C사를 턱밑까지 추격하는데 큰 역할을 수행하였습니다.
 당시 불안정하던 앱 내에 `Fabric Crachlytics`를 도입하여 이슈를 추적하고
