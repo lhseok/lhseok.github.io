@@ -1,0 +1,31 @@
+I"H	<h3>개요</h3>
+<p><a href="https://cellook.kr"><img src="/assets/images/projects/showa1.jpg" alt="link" /></a>
+<a href="https://cellook.kr"><img src="/assets/images/projects/showa2.jpg" alt="link" /></a>
+온라인 여성 패션 플랫폼 앱으로, ‘21년 3월 최초 출시, 6월부터 마케팅 진행하여 앱 DAU 10k의 성과를 보였습니다. 팀 구성은 back/front-end, iOS/Android, 디자이너, 기획자로 구성되어 있으며 실무와 팀 관리 병행하여 업무 진행하였습니다. 합류 당시 구성원 대부분 모바일 서비스에 이해도가 부족했고, 관련하여 플랫폼별 특성, 배포/업데이트 앱 서비스 전반적인 지식 전파를 위해 Confluence 가이드 문서 작성하였습니다. 또한 디자인이나 기획 업무 진행 시 플랫폼별 가이드 준수토록 제안하였습니다.<br />
+관련기사: <a href="https://blog.naver.com/venturesquare_/222491194975">앱 애니, 2분기 한국 패션 쇼핑 앱 TOP10 공개</a></p>
+
+<h3>주요업무</h3>
+<ul>
+  <li>프로젝트 초기 설계부터 출시, 유지보수</li>
+  <li>back-end 담당자와 플랫폼별 API 협의 및 공유</li>
+  <li><code class="highlighter-rouge">UICollectionView</code> <code class="highlighter-rouge">UICollectionViewFlowLayout</code> 리스트 구현</li>
+  <li><code class="highlighter-rouge">JWT token</code>으로 사용자 로그인 처리</li>
+  <li><code class="highlighter-rouge">Naver</code> <code class="highlighter-rouge">Kakao</code> <code class="highlighter-rouge">Apple</code> 간편 로그인 적용</li>
+  <li><code class="highlighter-rouge">WKWebView URL hook</code> 방식 적용</li>
+  <li><code class="highlighter-rouge">deeplink</code> 설계 및 테스트 가능한 페이지 제작</li>
+  <li><code class="highlighter-rouge">iTunes Connect</code> 계정관리 및 <code class="highlighter-rouge">Ad-Hoc</code> <code class="highlighter-rouge">TestFlight</code> 병행 배포</li>
+  <li>운영 요청건 협의 및 팀원 관리</li>
+</ul>
+
+<div class="hyde tags skills">
+    <a class="hyde tag">Firebase Messaging</a>
+    <a class="hyde tag">Analytics</a>
+    <a class="hyde tag">Crashlytics</a>
+    <a class="hyde tag">Appsflyer</a>
+    <a class="hyde tag">SwiftyJson</a>
+    <a class="hyde tag">SnapKit</a>
+    <a class="hyde tag">Alamofire</a>
+    <a class="hyde tag">SDWebImage</a>
+</div>
+
+:ET

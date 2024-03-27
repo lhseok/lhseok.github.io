@@ -4,14 +4,16 @@ description: 2013.07 - 2019.12 (6년 6개월)
 image: wemap0.jpg
 date: 2013-07-08
 ---
-
 [![link](/assets/images/projects/wemap1.jpg)][app link]
+
+<h2>개요</h2>
 2013년 소셜커머스 3사가 한창 경쟁구도일 때, 당시 2등이었던 위메프를 선택하였고
 1등인 C사를 턱밑까지 추격하는데 큰 역할을 수행하였습니다.
 당시 불안정하던 앱 내에 `Fabric Crachlytics`를 도입하여 이슈를 추적하고
 안정화에 주력하여 DAU 200k의 쾌거를 이루었습니다.
 iOS 앱 메인 개발 및 팀 업무 할당 / 기획 / 디자인 / QA까지, 전반적인 서비스 전체 업무 협의 진행하였습니다.
 
+<h2>주요업무</h2>
 - 중복된 여러 클래스의 리스트를 공용 딜리스트로 모듈화
 - `UIWebView` > `WKWebView` 마이그레이션
 - `WKWebView Javascript Handler` 연동
@@ -34,5 +36,9 @@ iOS 앱 메인 개발 및 팀 업무 할당 / 기획 / 디자인 / QA까지, 전
     <a class="hyde tag">SDWebImage</a>
     <a class="hyde tag">TTTAttributedLabel</a>
 </div>
+
+<h2>관련링크</h2>
+[[Platum] 위메프, 2019년 거래액 6.4조 규모 전년비 18.5%↑](https://platum.kr/archives/139294)<br>
+[[IT데일리] 위메프, 애플워치용 앱 출시](http://www.itdaily.kr/news/articleView.html?idxno=66070)
 
 [app link]: itms-apps://itunes.apple.com/app/449141904

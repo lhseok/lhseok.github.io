@@ -1,0 +1,29 @@
+I"�<p><a href="itms-apps://itunes.apple.com/app/1515428637"><img src="/assets/images/projects/soldout2.jpeg" alt="link" /></a></p>
+<h2>개요</h2>
+<p>무신사에서 법인을 분리하여, 한정판 스니커즈 대상 C2C 리셀 앱을 주력으로 서비스하고 있으며,
+23년 말부터는 중고 스니커즈 거래를 추가로 개발하여 매출을 꾀하는 중입니다.
+iOS/Android 두 파트를 관리하였고 iOS 개발도 병행으로 업무 진행하고 있습니다.</p>
+
+<h2>주요업무</h2>
+<ul>
+  <li><code class="highlighter-rouge">RxSwift</code> <code class="highlighter-rouge">MVVM</code> 패턴 사용</li>
+  <li><code class="highlighter-rouge">Appsflyer onelink</code> + <code class="highlighter-rouge">deferred deeplink</code> 추가 적용</li>
+  <li><code class="highlighter-rouge">JWT token</code> 이용 사용자 로그인 처리</li>
+  <li><code class="highlighter-rouge">WKWebView Javascript Handler</code> 방식 적용</li>
+  <li><code class="highlighter-rouge">iTunes Connect</code> 계정관리 및 <code class="highlighter-rouge">Ad-Hoc</code> <code class="highlighter-rouge">TestFlight</code> 병행 배포</li>
+  <li>백엔드/기획/디자인 협의 및 공유</li>
+  <li>운영 이슈 처리 및 파트별 업무 할당, 일정 관리</li>
+</ul>
+<div class="hyde tags skills">
+    <a class="hyde tag">Firebase Messaging</a>
+    <a class="hyde tag">Analytics</a>
+    <a class="hyde tag">Crashlytics</a>
+    <a class="hyde tag">Appsflyer</a>
+    <a class="hyde tag">SwiftyJson</a>
+    <a class="hyde tag">SnapKit</a>
+    <a class="hyde tag">Alamofire</a>
+    <a class="hyde tag">Kingfisher</a>
+    <a class="hyde tag">SDWebImage</a>
+</div>
+
+:ET

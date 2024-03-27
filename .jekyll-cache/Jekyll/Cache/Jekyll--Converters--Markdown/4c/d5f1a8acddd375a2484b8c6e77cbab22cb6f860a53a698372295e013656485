@@ -1,0 +1,25 @@
+I"F<p><a href="itms-apps://itunes.apple.com/app/430260350"><img src="/assets/images/projects/hackers1.jpg" alt="" /></a>
+<a href="itms-apps://itunes.apple.com/app/492182209"><img src="/assets/images/projects/hackers2.jpg" alt="" /></a></p>
+
+<h2>개요</h2>
+<p>어학원생을 대상으로, 교재와 함께 학습할 수 있는 앱을 제작하여 매출 극대화를 노렸습니다.
+당시 어학원 중 탑 수준의 매출이 일어났고 그에 따라 여러 교재에 맞춤 앱을 만들어
+기초영문법 / 텝스보카 / 리스닝 / 잡 등 많은 시도를 진행하였습니다.
+이때까지만 해도 앱 시장이 활성화된 것에 대비하여 모바일 환경을 제대로 알고 기획하는 인원이 많지 않아
+끊임없는 소통과 시행착오를 통해 지식 전파를 하였습니다.</p>
+
+<h2>주요업무</h2>
+<ul>
+  <li><code class="highlighter-rouge">plist</code> 파일 생성로 일본어 언어 팩 관리 및 적용</li>
+  <li>토익타이머 및 점수 환산 기능</li>
+  <li>커스텀 캘린더 개발</li>
+  <li><code class="highlighter-rouge">Background Remote Control</code> 적용</li>
+  <li><code class="highlighter-rouge">Landscape</code> 모드 지원</li>
+  <li>DB이용 언어팩 테이블 교체 가능토록 개발</li>
+  <li><code class="highlighter-rouge">Local Push Notification</code></li>
+  <li><code class="highlighter-rouge">memory leak</code>, <code class="highlighter-rouge">bad access</code> 관련 크래시 디버깅</li>
+  <li><code class="highlighter-rouge">UIWebView</code></li>
+  <li><code class="highlighter-rouge">APNS</code></li>
+</ul>
+
+:ET

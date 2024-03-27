@@ -1,0 +1,36 @@
+I"�	<p><a href="itms-apps://itunes.apple.com/app/449141904"><img src="/assets/images/projects/wemap1.jpg" alt="link" /></a></p>
+
+<h2>개요</h2>
+<p>2013년 소셜커머스 3사가 한창 경쟁구도일 때, 당시 2등이었던 위메프를 선택하였고
+1등인 C사를 턱밑까지 추격하는데 큰 역할을 수행하였습니다.
+당시 불안정하던 앱 내에 <code class="highlighter-rouge">Fabric Crachlytics</code>를 도입하여 이슈를 추적하고
+안정화에 주력하여 DAU 200k의 쾌거를 이루었습니다.
+iOS 앱 메인 개발 및 팀 업무 할당 / 기획 / 디자인 / QA까지, 전반적인 서비스 전체 업무 협의 진행하였습니다.</p>
+
+<h2>주요업무</h2>
+<ul>
+  <li>중복된 여러 클래스의 리스트를 공용 딜리스트로 모듈화</li>
+  <li><code class="highlighter-rouge">UIWebView</code> &gt; <code class="highlighter-rouge">WKWebView</code> 마이그레이션</li>
+  <li><code class="highlighter-rouge">WKWebView Javascript Handler</code> 연동</li>
+  <li><code class="highlighter-rouge">edge swift back</code>으로 인한 <code class="highlighter-rouge">screen lock</code> 이슈 수정</li>
+  <li><code class="highlighter-rouge">deeplink</code> 설계 및 테스트 <code class="highlighter-rouge">HTML</code> 페이지 작성</li>
+  <li><code class="highlighter-rouge">universal</code> 해상도 지원으로 <code class="highlighter-rouge">iPad</code> 설치 가능</li>
+  <li><code class="highlighter-rouge">Apple Watch</code> 앱 추가 개발</li>
+  <li><code class="highlighter-rouge">non-ARC</code> &gt; <code class="highlighter-rouge">ARC</code> 컨버팅</li>
+  <li><code class="highlighter-rouge">FCM</code> 도입 및 기존 <code class="highlighter-rouge">APNS</code> 인증서 방식에서 인증 <code class="highlighter-rouge">key</code> 방식으로 변경</li>
+  <li><code class="highlighter-rouge">iTunes Connect</code> 계정관리 및 <code class="highlighter-rouge">Ad-Hoc</code> <code class="highlighter-rouge">Test Flight</code> 병행 배포</li>
+</ul>
+<div class="hyde tags skills">
+    <a class="hyde tag">Firebase Messaging</a>
+    <a class="hyde tag">Analytics</a>
+    <a class="hyde tag">Fabric</a>
+    <a class="hyde tag">Branch</a>
+    <a class="hyde tag">Facebook</a>
+    <a class="hyde tag">SwiftyJson</a>
+    <a class="hyde tag">SnapKit</a>
+    <a class="hyde tag">Alamofire</a>
+    <a class="hyde tag">SDWebImage</a>
+    <a class="hyde tag">TTTAttributedLabel</a>
+</div>
+
+:ET
