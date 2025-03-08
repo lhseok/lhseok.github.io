@@ -4,7 +4,6 @@ description: 2024.05 - 현재 (2년 7개월)
 image: wconcept1.jpg
 date: 2024-05-13
 ---
-[![link](/assets/images/projects/wconcept1.jpg)][app link]
 [![link](/assets/images/projects/wconcept2.png)][app link]
 <h2>개요</h2>
 24년 5월부터 프리랜서로 합류하였고 전면적인 리뉴얼 업데이트 항목 중, “단독” 리스트 메뉴와 “발견”에서의 카드형 롤링 배너 인터랙션 및 애니메이션을 담당하여 개발하였습니다. 그외 W컨셉의 파트너사 타겟으로 PIN 앱을 유지보수 진행중입니다.
