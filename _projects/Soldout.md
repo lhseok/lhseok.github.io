@@ -1,6 +1,6 @@
 ---
 title: Soldout
-description: 2021.09 - 현재 (2년 7개월)
+description: 2021.09 - 2024.04 (2년 7개월)
 image: soldout1.jpeg
 date: 2021-09-27
 ---
