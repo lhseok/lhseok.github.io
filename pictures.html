@@ -1,0 +1,34 @@
+---
+layout: default
+title: Pictures
+permalink: /pictures
+---
+
+<h1 class="section-title">Pictures</h1>
+
+<div class="grid-container">
+  {% assign sorted_pictures = site.pictures | sort: 'date' | reverse %}
+  {% for item in sorted_pictures %}
+    <div class="thumbnail-card" onclick="openLightbox('{{ site.baseurl }}{{ item.image }}', '{{ item.title }}')">
+      <div class="thumbnail-img">
+        <img src="{{ site.baseurl }}{{ item.image }}" alt="{{ item.title }}">
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<!-- Simple Lightbox Container -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; align-items:center; justify-content:center; flex-direction:column; padding:20px;" onclick="this.style.display='none'">
+  <img id="lightbox-img" style="max-width:90%; max-height:80%; object-fit:contain; margin-bottom:20px;">
+  <div style="text-align:center;">
+    <h3 id="lightbox-title" style="margin-bottom:0px;"></h3>
+  </div>
+</div>
+
+<script>
+  function openLightbox(src, title) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-title').innerText = title;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+</script>

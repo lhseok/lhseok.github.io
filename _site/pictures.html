@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pictures | leehoseok</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <a href="/" class="logo">leehoseok</a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Curtain -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/blog" class="nav-item">/archive</a>
+    <a href="/projects" class="nav-item">/project</a>
+    <a href="/drawings" class="nav-item">/drawing</a>
+    <a href="/pictures" class="nav-item">/picture</a>
+    <a href="/about" class="nav-item">/about</a>
+    <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+  </nav>
+
+  <div class="wrapper">
+    <!-- Desktop Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="logo">
+          <a href="/">leehoseok</a>
+        </div>
+        <ul class="nav-menu">
+          <li ><a href="/blog">/archive</a></li>
+          <li ><a href="/projects">/project</a></li>
+          <li ><a href="/drawings">/drawing</a></li>
+          <li class="active"><a href="/pictures">/picture</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="/about" class="nav-item">/about</a>
+        <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <h1 class="section-title">Pictures</h1>
+
+<div class="grid-container">
+  
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20260103.jpg', '2026.01.03')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20260103.jpg" alt="2026.01.03">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20260101.jpg', '2026.01.01')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20260101.jpg" alt="2026.01.01">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20250922.jpg', '2025.09.22')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20250922.jpg" alt="2025.09.22">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20250921.jpg', '2025.09.21')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20250921.jpg" alt="2025.09.21">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20250920.jpg', '2025.09.20')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20250920.jpg" alt="2025.09.20">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20250731.jpg', '2025.07.31')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20250731.jpg" alt="2025.07.31">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20250730.jpg', '2025.07.30')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20250730.jpg" alt="2025.07.30">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20250701.jpg', '2025.07.01')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20250701.jpg" alt="2025.07.01">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20250504.jpg', '2025.05.04')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20250504.jpg" alt="2025.05.04">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20241230.jpg', '2024.12.30')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20241230.jpg" alt="2024.12.30">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20241109.jpg', '2024.11.09')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20241109.jpg" alt="2024.11.09">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20240907.jpg', '2024.09.07')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20240907.jpg" alt="2024.09.07">
+      </div>
+    </div>
+  
+    <div class="thumbnail-card" onclick="openLightbox('/assets/images/pictures/20231104.jpg', '2023.11.04')">
+      <div class="thumbnail-img">
+        <img src="/assets/images/pictures/20231104.jpg" alt="2023.11.04">
+      </div>
+    </div>
+  
+</div>
+
+<!-- Simple Lightbox Container -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; align-items:center; justify-content:center; flex-direction:column; padding:20px;" onclick="this.style.display='none'">
+  <img id="lightbox-img" style="max-width:90%; max-height:80%; object-fit:contain; margin-bottom:20px;">
+  <div style="text-align:center;">
+    <h3 id="lightbox-title" style="margin-bottom:0px;"></h3>
+  </div>
+</div>
+
+<script>
+  function openLightbox(src, title) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-title').innerText = title;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+</script>
+
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target)) {
+        mobileNav.classList.remove('active');
+      }
+    });
+
+    // Close menu when clicking a nav item
+    const navItems = mobileNav.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

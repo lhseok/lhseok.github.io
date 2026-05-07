@@ -1,201 +1,151 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="leehoseok,blog,portfolio" />
-  <meta name="description" content="이호석입니다." />
-  <meta name="author" content="leehoseok" />
-  <meta name="theme-color" content="#4568f0" /> <!-- Edit this -->
-  <meta name="msapplication-TileColor" content="#ffffff" /> <!-- Edit this -->
-
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="About |  leehoseok"
-  />
-  <meta property="og:description" content='저를 소개합니다.' />
-  <meta property="og:image" content="/assets/images/projects/demo.jpg" /> <!-- Edit this -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" /> <!-- Edit this -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" /> <!-- Edit this -->
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" /> <!-- Edit this -->
-  <link rel="manifest" href="/assets/images/site.webmanifest" /> 
-  <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#4568f0" /> <!-- Edit this -->
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.3.0/css/grid.min.css" />
-  <link rel="stylesheet" href="/assets/css/hyde.css" />
-  <link rel="stylesheet" href="/assets/css/monokai.css" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "");
-  </script>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://kit.fontawesome.com/e9e8beb1d5.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-  <script src="/assets/js/hyde.js"></script>
-  <title>About |  leehoseok</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | leehoseok</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
+<body>
 
-  <body>
-    <header class="hyde header ">
-  <nav class="hyde navbar-parent ">
-    
-    <div class="hyde mobile-nav-wrapper">
-      <div class="hyde container">
-        <ul class="hyde mobile-nav">
-          <div class="hyde mobile-nav-row">
-            <a class="hyde mobile-nav-item logo" href=""><i class="fas fa-meteor"></i> leehoseok</a>
-            <a class="hyde mobile-nav-item close-btn"><i class="fas fa-times"></i></a>
-          </div>
-              
-          <a class="hyde mobile-nav-item active " href="/about">About</a>
-                 
-          <a class="hyde mobile-nav-item" href="/projects">Projects</a>
-             
-        </ul>
-      </div>
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <a href="/" class="logo">leehoseok</a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="hyde container">
-      <ul class="hyde navbar">
-        <li class="hyde nav-item">
-          <a class="hyde nav-logo" href=""><i class="fas fa-meteor"></i> leehoseok</a>
-        </li>
-        <li class="hyde nav-toggler">
-          <a class="hyde nav-toggle-btn"><i class="fas fa-bars"></i></a>
-        </li>
-            
-        <li class="hyde nav-item active ">
-          <a href="/about">About</a>
-        </li>
-               
-        <li class="hyde nav-item">
-          <a href="/projects">Projects</a>
-        </li>
-           
-      </ul>
-    </div>
+  </header>
+
+  <!-- Mobile Navigation Curtain -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/blog" class="nav-item">/archive</a>
+    <a href="/projects" class="nav-item">/project</a>
+    <a href="/drawings" class="nav-item">/drawing</a>
+    <a href="/pictures" class="nav-item">/picture</a>
+    <a href="/about" class="nav-item">/about</a>
+    <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
   </nav>
-</header>
 
-    <section class="hyde main">
-       <div class="hyde jumbotron">
-  <div class="hyde container">
-    <h1>About</h1>
-    
-    <h2>저를 소개합니다.</h2>
-     
-  </div>
-</div>
-
-      <div class="hyde container">
-        <div class="hyde content about">
-  <h2>이호석 <small class="hyde name">iOS 개발자</small></h2>
-  <p>10년 이상 iOS 앱을 주력으로 개발해왔으며 유저와 
-    비즈니스 모두를 만족시킬 수 있는 코드를 추구합니다. 
-    주도적인 업무 진행을 좋아하지만, 때때로 발생하는 급한 
-    업무 요청도 유연하고 빠르게 처리합니다. 
-    개발자의 최대 덕목은 존중과 배려라고 생각합니다.</p>
-  <h2>⚒️ Skills</h2>
-  <div class="hyde tags skills">
-    <a class="hyde tag">iOS</a>
-    <a class="hyde tag">Swift</a>
-    <a class="hyde tag">RxSwift</a>
-    <a class="hyde tag">Objective-C</a>
-    <a class="hyde tag">Javascript</a>
-    <a class="hyde tag">HTML</a>
-    <a class="hyde tag">Git</a>
-    <a class="hyde tag">Figma</a>
-    <a class="hyde tag">Zeplin</a>
-    <a class="hyde tag">Google Analytics</a>
-    <a class="hyde tag">Firebase</a>
-    <a class="hyde tag">Confluence</a>
-    <a class="hyde tag">Jira</a>
-    <a class="hyde tag">Slack</a>
-    <a class="hyde tag">Teams</a>
-  </div>
-  <h2>📖 Career</h2>
-  <div class="hyde career-wrapper">
-    <div class="hyde career divider">
-      <div class="hyde career-place">에스엘디티</div>
-      <div class="hyde career-desc">
-        <p class="hyde career-role">앱개발팀(팀장)</p>
-        <p class="hyde career-duration">2021.09 - 재직중 (2년 7개월)</p>
-      </div>
-    </div>
-    <div class="hyde career divider">
-      <div class="hyde career-place">루나소프트</div>
-      <div class="hyde career-desc">
-        <p class="hyde career-role">Showa팀(리더)</p>
-        <p class="hyde career-duration">2020.01 - 2021.09 (1년 9개월)</p>
-      </div>
-    </div>
-    <div class="hyde career divider">
-      <div class="hyde career-place">위메프</div>
-      <div class="hyde career-desc">
-        <p class="hyde career-role">iOS개발팀(팀장)</p>
-        <p class="hyde career-duration">2013.07 - 2019.12 (6년 6개월)</p>
-      </div>
-    </div>
-    <div class="hyde career divider">
-      <div class="hyde career-place">PlusMX</div>
-      <div class="hyde career-desc">
-        <p class="hyde career-role">앱개발팀(선임)</p>
-        <p class="hyde career-duration">2012.12 - 2013.07 (7개월)</p>
-      </div>
-    </div>
-    <div class="hyde career divider">
-      <div class="hyde career-place">해커스</div>
-      <div class="hyde career-desc">
-        <p class="hyde career-role">모바일앱개발팀(팀장)</p>
-        <p class="hyde career-duration">2011.05 - 2012.11 (1년 7개월)</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-      
-    </section>
-    <footer class="hyde footer-wrapper">
-  <div class="hyde container">
-    <div class="hyde footer">
-      <div class="hyde footer-left">
-        <ul class="hyde footer-menu links">
-              
-          <li>
-            <a href="/about">About</a>
-          </li>
-                
-          <li>
-            <a href="/projects">Projects</a>
-          </li>
-             
-        </ul>
-        <p class="text">&copy; 2024 leehoseok</p>
-      </div>
-      <div class="hyde footer-right">
-        <ul class="hyde footer-menu social">
-          <li>
-            <a href="https://github.com/lhseok"><i class="fab fa-github"></i></a>
-          </li>
-          <li>
-            <a href="mailto:lhseok0228@gmail.com"><i class="fas fa-envelope"></i></a>
-          </li>
+  <div class="wrapper">
+    <!-- Desktop Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="logo">
+          <a href="/">leehoseok</a>
+        </div>
+        <ul class="nav-menu">
+          <li ><a href="/blog">/archive</a></li>
+          <li ><a href="/projects">/project</a></li>
+          <li ><a href="/drawings">/drawing</a></li>
+          <li ><a href="/pictures">/picture</a></li>
         </ul>
       </div>
-    </div>
-  </div>
-</footer>
 
-  </body>
+      <div class="sidebar-footer">
+        <a href="/about" class="nav-item">/about</a>
+        <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <h1 class="section-title">About</h1>
+
+<div class="about-intro" style="margin-bottom: 60px;">
+  <p style="font-size: 18px; color: #ccc; margin-bottom: 20px;">위메프, 무신사 솔드아웃, W컨셉 등 국내 대형 커머스 플랫폼의 핵심 시스템을 설계하고 팀을 리딩해왔습니다. Objective-C부터 최신 AI 워크플로우까지 아우르는 폭넓은 기술 수용력을 바탕으로, DAU 200k 규모의 대규모 서비스 안정화와 신규 서비스 런칭을 두루 성공시켰습니다. 동료에 대한 존중을 바탕으로 업무에 임하며, 데이터 기반의 효율적인 조직 운영과 유연한 문제 해결에 강점이 있습니다.</p>
+</div>
+
+<h2 class="section-title" style="font-size: 24px;">Skills</h2>
+<div class="skills-grid" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 60px;">
+  
+    <span style="background: #222; border: 1px solid #333; padding: 5px 15px; border-radius: 20px; font-size: 14px;">iOS</span>
+  
+    <span style="background: #222; border: 1px solid #333; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Swift</span>
+  
+    <span style="background: #222; border: 1px solid #333; padding: 5px 15px; border-radius: 20px; font-size: 14px;">RxSwift</span>
+  
+    <span style="background: #222; border: 1px solid #333; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Objective-C</span>
+  
+    <span style="background: #222; border: 1px solid #333; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Claude Code</span>
+  
+    <span style="background: #222; border: 1px solid #333; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Figma</span>
+  
+    <span style="background: #222; border: 1px solid #333; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Firebase</span>
+  
+    <span style="background: #222; border: 1px solid #333; padding: 5px 15px; border-radius: 20px; font-size: 14px;">MVVM</span>
+  
+    <span style="background: #222; border: 1px solid #333; padding: 5px 15px; border-radius: 20px; font-size: 14px;">SPM</span>
+  
+    <span style="background: #222; border: 1px solid #333; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Netfunnel</span>
+  
+</div>
+
+<h2 class="section-title" style="font-size: 24px;">Career</h2>
+<div class="career-list">
+  
+    <div class="career-item">
+      <h3 class="company">더블유컨셉코리아</h3>
+      <p class="period">2024.05 - 재직중<span class="pipe-separator">|</span>iOS 앱 개발 및 유지보수<span class="pipe-separator">|</span>매니저</p>
+    </div>
+  
+    <div class="career-item">
+      <h3 class="company">무신사 에스엘디티</h3>
+      <p class="period">2021.09 - 2024.04<span class="pipe-separator">|</span>iOS 앱 개발 및 프론트 서비스 총괄<span class="pipe-separator">|</span>팀장</p>
+    </div>
+  
+    <div class="career-item">
+      <h3 class="company">블룸에이아이</h3>
+      <p class="period">2020.01 - 2021.09<span class="pipe-separator">|</span>신규 커머스 iOS 앱 개발 및 서비스 총괄<span class="pipe-separator">|</span>팀장</p>
+    </div>
+  
+    <div class="career-item">
+      <h3 class="company">위메프</h3>
+      <p class="period">2013.07 - 2019.12<span class="pipe-separator">|</span>iOS 앱 개발 및 유지보수<span class="pipe-separator">|</span>팀장</p>
+    </div>
+  
+    <div class="career-item">
+      <h3 class="company">플러스엠엑스</h3>
+      <p class="period">2012.12 - 2013.07<span class="pipe-separator">|</span>신규 iOS 게임 앱 개발<span class="pipe-separator">|</span>선임</p>
+    </div>
+  
+    <div class="career-item">
+      <h3 class="company">해커스</h3>
+      <p class="period">2011.05 - 2012.11<span class="pipe-separator">|</span>iOS 앱 개발 및 앱 서비스 총괄<span class="pipe-separator">|</span>팀장</p>
+    </div>
+  
+</div>
+
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target)) {
+        mobileNav.classList.remove('active');
+      }
+    });
+
+    // Close menu when clicking a nav item
+    const navItems = mobileNav.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
 </html>

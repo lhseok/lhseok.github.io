@@ -1,34 +1,29 @@
 ---
-title: 해커스토익
-description: 2011.05 - 2012.11 (1년 7개월)
-image: hackers0.jpg
-date: 2011-05-07
+layout: project
+title: "해커스토익"
+company: "해커스"
+description: "해커스 주요 신규 앱 개발 및 유지보수 총괄"
+period: "2011.05 - 2012.11"
+thumbnail: "/assets/images/projects/hackers0.jpg"
+header_image: "/assets/images/projects/hackers1.jpg"
 ---
-[![](/assets/images/projects/hackers1.jpg)][app1 link]
-[![](/assets/images/projects/hackers2.jpg)][app2 link]
 
-<h2>개요</h2>
-어학원생을 대상으로, 교재와 함께 학습할 수 있는 앱을 제작하여 매출 극대화를 노렸습니다.
-당시 어학원 중 탑 수준의 매출이 일어났고 그에 따라 여러 교재에 맞춤 앱을 만들어
-기초영문법 / 텝스보카 / 리스닝 / 잡 등 많은 시도를 진행하였습니다.
-이때까지만 해도 앱 시장이 활성화된 것에 대비하여 모바일 환경을 제대로 알고 기획하는 인원이 많지 않아
-끊임없는 소통과 시행착오를 통해 지식 전파를 하였습니다.
+*2011.05 - 2012.11 \| iOS 앱 개발 \| 팀장*
 
-<h2>주요업무</h2>
-- `plist` 파일 생성로 일본어 언어 팩 관리 및 적용
-- 토익타이머 및 점수 환산 기능
-- 커스텀 캘린더 개발
-- `Background Remote Control` 적용
-- `Landscape` 모드 지원
-- DB이용 언어팩 테이블 교체 가능토록 개발
-- `Local Push Notification`
-- `memory leak`, `bad access` 관련 크래시 디버깅
-- `UIWebView`
-- `APNS`
+해커스 교육 콘텐츠의 모바일 서비스 라인업(기초영문법, 텝스보카, 리스닝 등)을 구축하고 고도화했습니다. 모바일 기획 전문 인력이 부재하던 시장 초기 단계에서 플랫폼 특성에 최적화된 기획 가이드를 제시하고, 학습 효율을 극대화하는 커스텀 기능을 설계하여 교육 부문 매출 증대에 기여했습니다.
 
-<h2>관련링크</h2>
-[[앱스토리] [2012 앱스토리 어워드] 베스트앱20 - 비게임부문](https://news.appstory.co.kr/plan3617)<br>
-[[서울신문] 해커스 교육그룹, ‘해커스 리스닝 핵심 영어회화’ 앱 출시](https://www.seoul.co.kr/news/life_old/2012/10/31/20121031500012)
+### [주요 성과]
+*   **교육 콘텐츠의 앱 서비스화**: 주요 교재 연계 학습 앱 시리즈를 성공적으로 런칭, 어학원 시장 내 모바일 점유율 1위 달성
+*   **모바일 조직 문화 정착**: 모바일 플랫폼에 대한 이해도가 낮은 유관 부서 기술 전파 및 협업 프로세스 정립하여 개발 리스크 사전 차단
+*   **학습 최적화 UX 설계**: 토익 타이머, 점수 환산 등 학습자 편의를 위한 전용 유틸리티 기능을 선제적으로 제안 및 구현
 
-[app1 link]: itms-apps://itunes.apple.com/app/430260350
-[app2 link]: itms-apps://itunes.apple.com/app/492182209
+### [기술적 고도화]
+*   **로컬라이징 및 데이터 관리**: Plist 및 DB 기반 언어 팩 관리 시스템 구축, 일본어 등 다국어 대응 및 콘텐츠 업데이트 유연성 확보
+*   **커스텀 컨트롤 구현**: 학습 스케줄 관리를 위한 커스텀 캘린더와 백그라운드 학습 편의를 위한 Remote Control 기능 개발
+*   **시스템 안정화**: 초기 환경에서 빈번했던 Memory Leak 및 Bad Access 이슈 정밀 디버깅, 앱 크래시율 최소화, 서비스 품질 확보
+*   **인터페이스 확장**: Landscape / Portrait 모드 지원 및 Local / Remote Push 시스템 구축을 통한 사용자 리텐션 강화
+
+### [기술 스택]
+*   **Language**: Objective-C
+*   **Framework**: UIKit, SQLite, AVFoundation(Remote Control)
+*   **Others**: UIWebView, APNS, Plist Localization

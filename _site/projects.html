@@ -1,220 +1,242 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="leehoseok,blog,portfolio" />
-  <meta name="description" content="이호석입니다." />
-  <meta name="author" content="leehoseok" />
-  <meta name="theme-color" content="#4568f0" /> <!-- Edit this -->
-  <meta name="msapplication-TileColor" content="#ffffff" /> <!-- Edit this -->
-
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="Projects |  leehoseok"
-  />
-  <meta property="og:description" content='지금까지 작업했던 프로젝트를 모아놓은 곳입니다.' />
-  <meta property="og:image" content="/assets/images/projects/demo.jpg" /> <!-- Edit this -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" /> <!-- Edit this -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" /> <!-- Edit this -->
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" /> <!-- Edit this -->
-  <link rel="manifest" href="/assets/images/site.webmanifest" /> 
-  <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#4568f0" /> <!-- Edit this -->
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.3.0/css/grid.min.css" />
-  <link rel="stylesheet" href="/assets/css/hyde.css" />
-  <link rel="stylesheet" href="/assets/css/monokai.css" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "");
-  </script>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://kit.fontawesome.com/e9e8beb1d5.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-  <script src="/assets/js/hyde.js"></script>
-  <title>Projects |  leehoseok</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | leehoseok</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
+<body>
 
-  <body>
-    <header class="hyde header ">
-  <nav class="hyde navbar-parent ">
-    
-    <div class="hyde mobile-nav-wrapper">
-      <div class="hyde container">
-        <ul class="hyde mobile-nav">
-          <div class="hyde mobile-nav-row">
-            <a class="hyde mobile-nav-item logo" href=""><i class="fas fa-meteor"></i> leehoseok</a>
-            <a class="hyde mobile-nav-item close-btn"><i class="fas fa-times"></i></a>
-          </div>
-              
-          <a class="hyde mobile-nav-item" href="/about">About</a>
-                 
-          <a class="hyde mobile-nav-item active " href="/projects">Projects</a>
-             
-        </ul>
-      </div>
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <a href="/" class="logo">leehoseok</a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="hyde container">
-      <ul class="hyde navbar">
-        <li class="hyde nav-item">
-          <a class="hyde nav-logo" href=""><i class="fas fa-meteor"></i> leehoseok</a>
-        </li>
-        <li class="hyde nav-toggler">
-          <a class="hyde nav-toggle-btn"><i class="fas fa-bars"></i></a>
-        </li>
-            
-        <li class="hyde nav-item">
-          <a href="/about">About</a>
-        </li>
-               
-        <li class="hyde nav-item active ">
-          <a href="/projects">Projects</a>
-        </li>
-           
-      </ul>
-    </div>
+  </header>
+
+  <!-- Mobile Navigation Curtain -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/blog" class="nav-item">/archive</a>
+    <a href="/projects" class="nav-item">/project</a>
+    <a href="/drawings" class="nav-item">/drawing</a>
+    <a href="/pictures" class="nav-item">/picture</a>
+    <a href="/about" class="nav-item">/about</a>
+    <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
   </nav>
-</header>
 
-    <section class="hyde main">
-       <div class="hyde jumbotron">
-  <div class="hyde container">
-    <h1>Projects</h1>
-    
-    <h2>지금까지 작업했던 프로젝트를 모아놓은 곳입니다.</h2>
-     
-  </div>
-</div>
-
-      <div class="hyde container">
-        <div class="hyde posts">
-   
-  <div class="hyde post divider">
-    <a href="/projects/Soldout">
-      <div class="hyde post-thumbnail-wrapper">
-        
-        <div class="hyde post-thumbnail" style="background-image: url('/assets/images/projects/soldout1.jpeg');"></div>
-        
-      </div>
-    </a>
-    <a href="/projects/Soldout">
-      <h2 class="hyde post-title">Soldout</h2>
-    </a>
-    <div class="hyde post-trail">
-      <span class="hyde post-date">2021년 9월 27일</span>
-    </div>
-  </div>
-  
-  <div class="hyde post divider">
-    <a href="/projects/Showa">
-      <div class="hyde post-thumbnail-wrapper">
-        
-        <div class="hyde post-thumbnail" style="background-image: url('/assets/images/projects/showa0.jpg');"></div>
-        
-      </div>
-    </a>
-    <a href="/projects/Showa">
-      <h2 class="hyde post-title">Showa</h2>
-    </a>
-    <div class="hyde post-trail">
-      <span class="hyde post-date">2020년 1월 2일</span>
-    </div>
-  </div>
-  
-  <div class="hyde post divider">
-    <a href="/projects/Wemap">
-      <div class="hyde post-thumbnail-wrapper">
-        
-        <div class="hyde post-thumbnail" style="background-image: url('/assets/images/projects/wemap0.jpg');"></div>
-        
-      </div>
-    </a>
-    <a href="/projects/Wemap">
-      <h2 class="hyde post-title">위메프</h2>
-    </a>
-    <div class="hyde post-trail">
-      <span class="hyde post-date">2013년 7월 8일</span>
-    </div>
-  </div>
-  
-  <div class="hyde post divider">
-    <a href="/projects/DreamNine">
-      <div class="hyde post-thumbnail-wrapper">
-        
-        <div class="hyde post-thumbnail" style="background-image: url('/assets/images/projects/dreamnine1.jpg');"></div>
-        
-      </div>
-    </a>
-    <a href="/projects/DreamNine">
-      <h2 class="hyde post-title">Dream 9</h2>
-    </a>
-    <div class="hyde post-trail">
-      <span class="hyde post-date">2012년 12월 3일</span>
-    </div>
-  </div>
-  
-  <div class="hyde post">
-    <a href="/projects/Hackers">
-      <div class="hyde post-thumbnail-wrapper">
-        
-        <div class="hyde post-thumbnail" style="background-image: url('/assets/images/projects/hackers0.jpg');"></div>
-        
-      </div>
-    </a>
-    <a href="/projects/Hackers">
-      <h2 class="hyde post-title">해커스토익</h2>
-    </a>
-    <div class="hyde post-trail">
-      <span class="hyde post-date">2011년 5월 7일</span>
-    </div>
-  </div>
-  
-</div>
-
-      </div>
-      
-    </section>
-    <footer class="hyde footer-wrapper">
-  <div class="hyde container">
-    <div class="hyde footer">
-      <div class="hyde footer-left">
-        <ul class="hyde footer-menu links">
-              
-          <li>
-            <a href="/about">About</a>
-          </li>
-                
-          <li>
-            <a href="/projects">Projects</a>
-          </li>
-             
-        </ul>
-        <p class="text">&copy; 2024 leehoseok</p>
-      </div>
-      <div class="hyde footer-right">
-        <ul class="hyde footer-menu social">
-          <li>
-            <a href="https://github.com/lhseok"><i class="fab fa-github"></i></a>
-          </li>
-          <li>
-            <a href="mailto:lhseok0228@gmail.com"><i class="fas fa-envelope"></i></a>
-          </li>
+  <div class="wrapper">
+    <!-- Desktop Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="logo">
+          <a href="/">leehoseok</a>
+        </div>
+        <ul class="nav-menu">
+          <li ><a href="/blog">/archive</a></li>
+          <li class="active"><a href="/projects">/project</a></li>
+          <li ><a href="/drawings">/drawing</a></li>
+          <li ><a href="/pictures">/picture</a></li>
         </ul>
       </div>
-    </div>
-  </div>
-</footer>
 
-  </body>
+      <div class="sidebar-footer">
+        <a href="/about" class="nav-item">/about</a>
+        <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <h1 class="section-title">Projects</h1>
+
+<div class="grid-container">
+  
+  
+    <a href="/projects/Wconcept" class="thumbnail-card">
+      <div class="thumbnail-img">
+        
+          <img src="/assets/images/projects/wconcept0.jpg" alt="W컨셉">
+        
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">W컨셉</h3>
+          <span class="card-date">2024.05 ~ 재직중</span>
+        </div>
+        
+      </div>
+    </a>
+  
+    <a href="/projects/Soldout" class="thumbnail-card">
+      <div class="thumbnail-img">
+        
+          <img src="/assets/images/projects/soldout0.jpg" alt="Soldout">
+        
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">Soldout</h3>
+          <span class="card-date">2021.09 ~ 2024.04</span>
+        </div>
+        
+      </div>
+    </a>
+  
+    <a href="/projects/Showa" class="thumbnail-card">
+      <div class="thumbnail-img">
+        
+          <img src="/assets/images/projects/showa0.jpg" alt="Showa">
+        
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">Showa</h3>
+          <span class="card-date">2020.01 ~ 2021.09</span>
+        </div>
+        
+      </div>
+    </a>
+  
+    <a href="/projects/hiddenprice" class="thumbnail-card">
+      <div class="thumbnail-img">
+        
+          <img src="/assets/images/projects/hiddenprice0.jpg" alt="히든프라이스">
+        
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">히든프라이스</h3>
+          <span class="card-date">2018.06 ~ 2019.12</span>
+        </div>
+        
+      </div>
+    </a>
+  
+    <a href="/projects/Wemap" class="thumbnail-card">
+      <div class="thumbnail-img">
+        
+          <img src="/assets/images/projects/wemap0.jpg" alt="위메프">
+        
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">위메프</h3>
+          <span class="card-date">2013.07 ~ 2019.12</span>
+        </div>
+        
+      </div>
+    </a>
+  
+    <a href="/projects/DreamNine" class="thumbnail-card">
+      <div class="thumbnail-img">
+        
+          <img src="/assets/images/projects/dreamnine0.jpg" alt="프로야구 드림나인">
+        
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">프로야구 드림나인</h3>
+          <span class="card-date">2012.12 ~ 2013.07</span>
+        </div>
+        
+      </div>
+    </a>
+  
+    <a href="/projects/hackersjob" class="thumbnail-card">
+      <div class="thumbnail-img">
+        
+          <img src="/assets/images/projects/hackerjob0.png" alt="해커스잡">
+        
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">해커스잡</h3>
+          <span class="card-date">2012.01 ~ 2012.11</span>
+        </div>
+        
+      </div>
+    </a>
+  
+    <a href="/projects/grammar" class="thumbnail-card">
+      <div class="thumbnail-img">
+        
+          <img src="/assets/images/projects/grammar0.jpg" alt="해커스 그래머게이트웨이">
+        
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">해커스 그래머게이트웨이</h3>
+          <span class="card-date">2011.08 ~ 2012.05</span>
+        </div>
+        
+      </div>
+    </a>
+  
+    <a href="/projects/tepsvoca" class="thumbnail-card">
+      <div class="thumbnail-img">
+        
+          <img src="/assets/images/projects/tepsvoca0.jpg" alt="해커스 텝스보카">
+        
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">해커스 텝스보카</h3>
+          <span class="card-date">2011.06 ~ 2012.02</span>
+        </div>
+        
+      </div>
+    </a>
+  
+    <a href="/projects/Hackers" class="thumbnail-card">
+      <div class="thumbnail-img">
+        
+          <img src="/assets/images/projects/hackers0.jpg" alt="해커스토익">
+        
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">해커스토익</h3>
+          <span class="card-date">2011.05 ~ 2012.11</span>
+        </div>
+        
+      </div>
+    </a>
+  
+</div>
+
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target)) {
+        mobileNav.classList.remove('active');
+      }
+    });
+
+    // Close menu when clicking a nav item
+    const navItems = mobileNav.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
 </html>

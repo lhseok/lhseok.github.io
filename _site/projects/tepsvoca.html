@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>해커스 텝스보카 | leehoseok</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <a href="/" class="logo">leehoseok</a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Curtain -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/blog" class="nav-item">/archive</a>
+    <a href="/projects" class="nav-item">/project</a>
+    <a href="/drawings" class="nav-item">/drawing</a>
+    <a href="/pictures" class="nav-item">/picture</a>
+    <a href="/about" class="nav-item">/about</a>
+    <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+  </nav>
+
+  <div class="wrapper">
+    <!-- Desktop Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="logo">
+          <a href="/">leehoseok</a>
+        </div>
+        <ul class="nav-menu">
+          <li ><a href="/blog">/archive</a></li>
+          <li class="active"><a href="/projects">/project</a></li>
+          <li ><a href="/drawings">/drawing</a></li>
+          <li ><a href="/pictures">/picture</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="/about" class="nav-item">/about</a>
+        <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <article class="project-detail">
+  <header style="margin-bottom: 60px;">
+    <h1 style="font-size: 40px; font-weight: 800; margin-bottom: 10px;">해커스 텝스보카</h1>
+    <p style="font-size: 18px; color: #888;">해커스 텝스(TEPS) 필수 어휘 암기 모바일 앱 개발</p>
+  </header>
+
+  
+  
+    <div style="margin-bottom: 60px;">
+      <img src="/assets/images/projects/tepsvoca1.jpg" alt="해커스 텝스보카" style="max-width: 100%; border: 1px solid #333;">
+    </div>
+  
+
+  <div class="project-content" style="font-size: 17px; line-height: 1.8; color: #ccc;">
+    <p><em>2011.06 - 2012.02<span class="pipe-separator">|</span>iOS 앱 개발<span class="pipe-separator">|</span>팀장</em></p>
+
+<p>해커스의 대표적인 어학 교재 ‘해커스 텝스보카’를 기반으로 한 어휘 암기 앱을 개발했습니다. 방대한 양의 텝스 필수 단어와 예문을 모바일에서 효율적으로 학습하고 복습할 수 있는 환경을 구축했으며, 사용자별 맞춤형 암기 관리 기능을 통해 학습 성과를 극대화하는 데 주력했습니다.</p>
+
+<h3 id="주요-성과">[주요 성과]</h3>
+<ul>
+  <li><strong>어휘 학습의 디지털화</strong>: 종이 교재의 학습 방식을 모바일에 최적화된 인터페이스로 변환하여 이동 중에도 끊김 없는 학습 지원</li>
+  <li><strong>고도화된 암기 시스템</strong>: ‘나만의 단어장’, ‘미암기 단어 집중 학습’ 등 개인화된 학습 기능을 통해 목표 점수 달성 기여</li>
+  <li><strong>교육 앱 시장의 강세</strong>: 텝스 학습자들 사이에서 필수 앱으로 자리 잡으며 해커스의 교육 콘텐츠 경쟁력 증명</li>
+</ul>
+
+<h3 id="기술적-고도화">[기술적 고도화]</h3>
+<ul>
+  <li><strong>대용량 데이터 관리 및 검색</strong>: 수천 개의 어휘와 예문 데이터를 빠르게 로딩하고 검색할 수 있도록 SQLite 인덱싱 및 캐싱 전략 적용</li>
+  <li><strong>다양한 암기 모드 구현</strong>: 플래시 카드, 단어 퀴즈, 리스닝 모드 등 다양한 학습 모드를 지원하는 상태 기반의 학습 엔진 설계</li>
+  <li><strong>멀티미디어 동기화</strong>: 단어와 예문의 음성 데이터를 텍스트와 실시간으로 매칭하여 재생하는 고정밀 오디오 싱크로나이즈 기능 구현</li>
+  <li><strong>데이터 업데이트 시스템</strong>: 신규 단어나 개정된 콘텐츠를 서버에서 동적으로 내려받아 적용할 수 있는 부분 업데이트 프로세스 구축</li>
+</ul>
+
+<h3 id="기술-스택">[기술 스택]</h3>
+<ul>
+  <li><strong>Language</strong>: Objective-C</li>
+  <li><strong>Framework</strong>: UIKit, SQLite, AVFoundation</li>
+  <li><strong>Others</strong>: JSON/XML Parsing, Multi-threading(GCD), Local Notification</li>
+</ul>
+
+  </div>
+</article>
+
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target)) {
+        mobileNav.classList.remove('active');
+      }
+    });
+
+    // Close menu when clicking a nav item
+    const navItems = mobileNav.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

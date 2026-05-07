@@ -1,174 +1,128 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="leehoseok,blog,portfolio" />
-  <meta name="description" content="이호석입니다." />
-  <meta name="author" content="leehoseok" />
-  <meta name="theme-color" content="#4568f0" /> <!-- Edit this -->
-  <meta name="msapplication-TileColor" content="#ffffff" /> <!-- Edit this -->
-
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="해커스토익 |  leehoseok"
-  />
-  <meta property="og:description" content='2011.05 - 2012.11 (1년 7개월)' />
-  <meta property="og:image" content="/assets/images/projects/demo.jpg" /> <!-- Edit this -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" /> <!-- Edit this -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" /> <!-- Edit this -->
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" /> <!-- Edit this -->
-  <link rel="manifest" href="/assets/images/site.webmanifest" /> 
-  <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#4568f0" /> <!-- Edit this -->
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.3.0/css/grid.min.css" />
-  <link rel="stylesheet" href="/assets/css/hyde.css" />
-  <link rel="stylesheet" href="/assets/css/monokai.css" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "");
-  </script>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://kit.fontawesome.com/e9e8beb1d5.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-  <script src="/assets/js/hyde.js"></script>
-  <title>해커스토익 |  leehoseok</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>해커스토익 | leehoseok</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
+<body>
 
-  <body>
-    <header class="hyde header ">
-  <nav class="hyde navbar-parent ">
-    
-    <div class="hyde mobile-nav-wrapper">
-      <div class="hyde container">
-        <ul class="hyde mobile-nav">
-          <div class="hyde mobile-nav-row">
-            <a class="hyde mobile-nav-item logo" href=""><i class="fas fa-meteor"></i> leehoseok</a>
-            <a class="hyde mobile-nav-item close-btn"><i class="fas fa-times"></i></a>
-          </div>
-              
-          <a class="hyde mobile-nav-item" href="/about">About</a>
-                 
-          <a class="hyde mobile-nav-item active " href="/projects">Projects</a>
-             
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <a href="/" class="logo">leehoseok</a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Curtain -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/blog" class="nav-item">/archive</a>
+    <a href="/projects" class="nav-item">/project</a>
+    <a href="/drawings" class="nav-item">/drawing</a>
+    <a href="/pictures" class="nav-item">/picture</a>
+    <a href="/about" class="nav-item">/about</a>
+    <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+  </nav>
+
+  <div class="wrapper">
+    <!-- Desktop Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="logo">
+          <a href="/">leehoseok</a>
+        </div>
+        <ul class="nav-menu">
+          <li ><a href="/blog">/archive</a></li>
+          <li class="active"><a href="/projects">/project</a></li>
+          <li ><a href="/drawings">/drawing</a></li>
+          <li ><a href="/pictures">/picture</a></li>
         </ul>
       </div>
-    </div>
-    <div class="hyde container">
-      <ul class="hyde navbar">
-        <li class="hyde nav-item">
-          <a class="hyde nav-logo" href=""><i class="fas fa-meteor"></i> leehoseok</a>
-        </li>
-        <li class="hyde nav-toggler">
-          <a class="hyde nav-toggle-btn"><i class="fas fa-bars"></i></a>
-        </li>
-            
-        <li class="hyde nav-item">
-          <a href="/about">About</a>
-        </li>
-               
-        <li class="hyde nav-item active ">
-          <a href="/projects">Projects</a>
-        </li>
-           
-      </ul>
-    </div>
-  </nav>
-</header>
 
-    <section class="hyde main">
-       <div class="hyde jumbotron">
-  <div class="hyde container">
-    <h1>해커스토익</h1>
-    
-    <h2>2011.05 - 2012.11 (1년 7개월)</h2>
-    
-    <div class="hyde post-desc reverse">
-      <a class="hyde post-back" href="/projects"><i class="fas fa-chevron-left"></i> 목록으로 돌아가기</a>
-    </div>
-     
-  </div>
-</div>
+      <div class="sidebar-footer">
+        <a href="/about" class="nav-item">/about</a>
+        <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+      </div>
+    </aside>
 
-      <div class="hyde container">
-        <div class="hyde content">
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <article class="project-detail">
+  <header style="margin-bottom: 60px;">
+    <h1 style="font-size: 40px; font-weight: 800; margin-bottom: 10px;">해커스토익</h1>
+    <p style="font-size: 18px; color: #888;">해커스 주요 신규 앱 개발 및 유지보수 총괄</p>
+  </header>
+
   
-  <img src="/assets/images/projects/hackers0.jpg" alt="hackers0" />
-    <p><a href="itms-apps://itunes.apple.com/app/430260350"><img src="/assets/images/projects/hackers1.jpg" alt="" /></a>
-<a href="itms-apps://itunes.apple.com/app/492182209"><img src="/assets/images/projects/hackers2.jpg" alt="" /></a></p>
+  
+    <div style="margin-bottom: 60px;">
+      <img src="/assets/images/projects/hackers1.jpg" alt="해커스토익" style="max-width: 100%; border: 1px solid #333;">
+    </div>
+  
 
-<h2>개요</h2>
-<p>어학원생을 대상으로, 교재와 함께 학습할 수 있는 앱을 제작하여 매출 극대화를 노렸습니다.
-당시 어학원 중 탑 수준의 매출이 일어났고 그에 따라 여러 교재에 맞춤 앱을 만들어
-기초영문법 / 텝스보카 / 리스닝 / 잡 등 많은 시도를 진행하였습니다.
-이때까지만 해도 앱 시장이 활성화된 것에 대비하여 모바일 환경을 제대로 알고 기획하는 인원이 많지 않아
-끊임없는 소통과 시행착오를 통해 지식 전파를 하였습니다.</p>
+  <div class="project-content" style="font-size: 17px; line-height: 1.8; color: #ccc;">
+    <p><em>2011.05 - 2012.11<span class="pipe-separator">|</span>iOS 앱 개발<span class="pipe-separator">|</span>팀장</em></p>
 
-<h2>주요업무</h2>
+<p>해커스 교육 콘텐츠의 모바일 서비스 라인업(기초영문법, 텝스보카, 리스닝 등)을 구축하고 고도화했습니다. 모바일 기획 전문 인력이 부재하던 시장 초기 단계에서 플랫폼 특성에 최적화된 기획 가이드를 제시하고, 학습 효율을 극대화하는 커스텀 기능을 설계하여 교육 부문 매출 증대에 기여했습니다.</p>
+
+<h3 id="주요-성과">[주요 성과]</h3>
 <ul>
-  <li><code class="highlighter-rouge">plist</code> 파일 생성로 일본어 언어 팩 관리 및 적용</li>
-  <li>토익타이머 및 점수 환산 기능</li>
-  <li>커스텀 캘린더 개발</li>
-  <li><code class="highlighter-rouge">Background Remote Control</code> 적용</li>
-  <li><code class="highlighter-rouge">Landscape</code> 모드 지원</li>
-  <li>DB이용 언어팩 테이블 교체 가능토록 개발</li>
-  <li><code class="highlighter-rouge">Local Push Notification</code></li>
-  <li><code class="highlighter-rouge">memory leak</code>, <code class="highlighter-rouge">bad access</code> 관련 크래시 디버깅</li>
-  <li><code class="highlighter-rouge">UIWebView</code></li>
-  <li><code class="highlighter-rouge">APNS</code></li>
+  <li><strong>교육 콘텐츠의 앱 서비스화</strong>: 주요 교재 연계 학습 앱 시리즈를 성공적으로 런칭, 어학원 시장 내 모바일 점유율 1위 달성</li>
+  <li><strong>모바일 조직 문화 정착</strong>: 모바일 플랫폼에 대한 이해도가 낮은 유관 부서 기술 전파 및 협업 프로세스 정립하여 개발 리스크 사전 차단</li>
+  <li><strong>학습 최적화 UX 설계</strong>: 토익 타이머, 점수 환산 등 학습자 편의를 위한 전용 유틸리티 기능을 선제적으로 제안 및 구현</li>
 </ul>
 
-<h2>관련링크</h2>
-<p><a href="https://news.appstory.co.kr/plan3617">[앱스토리] [2012 앱스토리 어워드] 베스트앱20 - 비게임부문</a><br />
-<a href="https://www.seoul.co.kr/news/life_old/2012/10/31/20121031500012">[서울신문] 해커스 교육그룹, ‘해커스 리스닝 핵심 영어회화’ 앱 출시</a></p>
+<h3 id="기술적-고도화">[기술적 고도화]</h3>
+<ul>
+  <li><strong>로컬라이징 및 데이터 관리</strong>: Plist 및 DB 기반 언어 팩 관리 시스템 구축, 일본어 등 다국어 대응 및 콘텐츠 업데이트 유연성 확보</li>
+  <li><strong>커스텀 컨트롤 구현</strong>: 학습 스케줄 관리를 위한 커스텀 캘린더와 백그라운드 학습 편의를 위한 Remote Control 기능 개발</li>
+  <li><strong>시스템 안정화</strong>: 초기 환경에서 빈번했던 Memory Leak 및 Bad Access 이슈 정밀 디버깅, 앱 크래시율 최소화, 서비스 품질 확보</li>
+  <li><strong>인터페이스 확장</strong>: Landscape / Portrait 모드 지원 및 Local / Remote Push 시스템 구축을 통한 사용자 리텐션 강화</li>
+</ul>
 
+<h3 id="기술-스택">[기술 스택]</h3>
+<ul>
+  <li><strong>Language</strong>: Objective-C</li>
+  <li><strong>Framework</strong>: UIKit, SQLite, AVFoundation(Remote Control)</li>
+  <li><strong>Others</strong>: UIWebView, APNS, Plist Localization</li>
+</ul>
 
-</div>
-
-      </div>
-      
-    </section>
-    <footer class="hyde footer-wrapper">
-  <div class="hyde container">
-    <div class="hyde footer">
-      <div class="hyde footer-left">
-        <ul class="hyde footer-menu links">
-              
-          <li>
-            <a href="/about">About</a>
-          </li>
-                
-          <li>
-            <a href="/projects">Projects</a>
-          </li>
-             
-        </ul>
-        <p class="text">&copy; 2024 leehoseok</p>
-      </div>
-      <div class="hyde footer-right">
-        <ul class="hyde footer-menu social">
-          <li>
-            <a href="https://github.com/lhseok"><i class="fab fa-github"></i></a>
-          </li>
-          <li>
-            <a href="mailto:lhseok0228@gmail.com"><i class="fas fa-envelope"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
   </div>
-</footer>
+</article>
 
-  </body>
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target)) {
+        mobileNav.classList.remove('active');
+      }
+    });
+
+    // Close menu when clicking a nav item
+    const navItems = mobileNav.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
 </html>

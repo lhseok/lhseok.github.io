@@ -1,44 +1,32 @@
 title: leehoseok
 description: >-
-  이호석입니다.
+  이호석의 포트폴리오 및 아카이브입니다.
 url: "https://lhseok.github.io"
 baseurl: ""
 github: lhseok
 email: lhseok0228@gmail.com
-google_analytics: ""
 
-exclude: [README.md, Gemfile, Gemfile.lock]
-
-comments:
-  enabled: true
-  repo: "REPO_COMMENTS_PATH"
-  issue-term: pathname
-
+# Collections
 collections:
-  pages:
-    output: true
   projects:
     output: true
-  tags:
+    permalink: /projects/:title
+  drawings:
     output: true
+    permalink: /drawings/:title
+  pictures:
+    output: true
+    permalink: /pictures/:title
 
 defaults:
   - scope:
-      type: pages
+      path: ""
     values:
       layout: default
   - scope:
+      path: ""
       type: posts
     values:
       layout: post
-      permalink: /blog/:title
-  - scope:
-      type: projects
-    values:
-      layout: project
-      permalink: /projects/:title
-  - scope:
-      type: tags
-    values:
-      layout: tag
-      permalink: /tags/:title
+
+exclude: [README.md, Gemfile, Gemfile.lock, .gemini, node_modules, vendor]

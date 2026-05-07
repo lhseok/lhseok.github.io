@@ -1,0 +1,375 @@
+---
+---
+
+/* --- Variables --- */
+$bg-color: #121212;
+$sidebar-bg: #1a1a1a;
+$text-color: #e0e0e0;
+$text-muted: #888888;
+$accent-color: #ffffff;
+$border-color: #333333;
+$sidebar-width: 280px;
+$mobile-header-height: 60px;
+
+/* --- Base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- Desktop Layout (2-column) --- */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: $sidebar-width;
+  background-color: $sidebar-bg;
+  border-right: 1px solid $border-color;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: $sidebar-width;
+  padding: 60px;
+  max-width: 1200px;
+}
+
+/* --- Sidebar Components --- */
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 60px;
+}
+
+.nav-menu li {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: $text-muted;
+  &.active {
+    color: $accent-color;
+  }
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 40px;
+  border-top: 1px solid $border-color;
+}
+
+.sidebar-footer .nav-item {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: $text-muted;
+}
+
+/* --- Mobile Header --- */
+.mobile-header {
+  display: none;
+  height: $mobile-header-height;
+  background-color: $sidebar-bg;
+  border-bottom: 1px solid $border-color;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+
+  .logo {
+    margin-bottom: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  height: 100%;
+  span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: $accent-color;
+  }
+}
+
+/* --- Mobile Menu Drawer --- */
+.mobile-nav {
+  position: fixed;
+  top: $mobile-header-height;
+  right: 0;
+  width: 200px;
+  bottom: 0;
+  background-color: rgba($bg-color, 0.98);
+  border-left: 1px solid $border-color;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  z-index: 150;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+  
+  &.active {
+    transform: translateX(0);
+  }
+
+  .nav-item {
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-muted;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 100px 20px 40px;
+  }
+  .mobile-header {
+    display: flex;
+  }
+}
+
+/* --- Page Specific Styles --- */
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 10px;
+}
+
+.career-item {
+  margin-bottom: 40px;
+  .company { font-size: 20px; font-weight: 700; }
+  .period { color: $text-muted; font-size: 14px; margin-bottom: 10px; font-style: italic; }
+  .role { font-weight: 600; margin-bottom: 15px; }
+  .projects { padding-left: 20px; }
+  .project-item { margin-bottom: 15px; }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.thumbnail-card {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  
+  .thumbnail-img {
+    aspect-ratio: 1 / 1;
+    background-color: $sidebar-bg;
+    border: 1px solid $border-color;
+    overflow: hidden;
+    margin-bottom: 12px;
+    img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      transition: transform 0.3s ease;
+    }
+    .no-image {
+      width: 100%; 
+      height: 100%; 
+      background: #333; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: #555;
+    }
+  }
+
+  .card-info {
+    padding: 0 2px;
+  }
+
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+
+  .card-company {
+    font-size: 11px;
+    font-weight: 700;
+    color: #aaa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+  }
+
+  .card-date {
+    font-size: 11px;
+    color: $text-muted;
+    opacity: 0.8;
+    white-space: nowrap;
+  }
+
+  .card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-color;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+
+  &:hover {
+    opacity: 1;
+    .thumbnail-img img {
+      transform: scale(1.05);
+    }
+    .card-title {
+      color: $accent-color;
+    }
+  }
+}
+
+/* --- Project Detail Styles --- */
+.project-detail img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 40px 0;
+  border: 1px solid $border-color;
+}
+
+.project-content {
+  h2 { font-size: 24px; margin: 40px 0 20px; color: $accent-color; }
+  h3 { font-size: 20px; margin: 30px 0 15px; color: #fff; }
+  h4 { font-size: 18px; margin: 20px 0 10px; color: #ddd; }
+  ul { padding-left: 20px; margin-bottom: 20px; list-style: disc; }
+  li { margin-bottom: 8px; }
+  p { margin-bottom: 20px; }
+  em { color: $text-muted; font-style: italic; }
+}
+
+/* --- Common Components --- */
+.pipe-separator {
+  display: inline-block;
+  color: #444;
+  font-size: 0.7em;
+  margin: 0 8px;
+  vertical-align: middle;
+  font-weight: normal;
+  font-style: normal !important;
+}
+
+/* --- Home / Terminal Styles --- */
+.terminal-container {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 64px; /* Align with sidebar's first menu item */
+}
+
+@media (max-width: 992px) {
+  .terminal-container {
+    margin-top: 20px;
+    min-height: auto;
+  }
+}
+
+.ascii-art {
+  font-size: 10px;
+  line-height: 1.2;
+  color: $accent-color;
+  margin-bottom: 30px;
+  white-space: pre;
+  pointer-events: none;
+  user-select: none;
+}
+
+.terminal-line {
+  font-size: 20px;
+  font-weight: 700;
+  color: $text-color;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background-color: $accent-color;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .ascii-art {
+    font-size: 4px;
+  }
+  .terminal-line {
+    font-size: 16px;
+  }
+}

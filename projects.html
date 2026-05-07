@@ -1,0 +1,29 @@
+---
+layout: default
+title: Projects
+permalink: /projects
+---
+
+<h1 class="section-title">Projects</h1>
+
+<div class="grid-container">
+  {% assign sorted_projects = site.projects | sort: "period" | reverse %}
+  {% for project in sorted_projects %}
+    <a href="{{ site.baseurl }}{{ project.url }}" class="thumbnail-card">
+      <div class="thumbnail-img">
+        {% if project.thumbnail %}
+          <img src="{{ site.baseurl }}{{ project.thumbnail }}" alt="{{ project.title }}">
+        {% else %}
+          <div class="no-image">No Image</div>
+        {% endif %}
+      </div>
+      <div class="card-info">
+        <div class="card-meta">
+          <h3 class="card-title">{{ project.title }}</h3>
+          <span class="card-date">{{ project.period | replace: " - ", " ~ " }}</span>
+        </div>
+        
+      </div>
+    </a>
+  {% endfor %}
+</div>

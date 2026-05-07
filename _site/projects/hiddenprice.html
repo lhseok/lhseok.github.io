@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>히든프라이스 | leehoseok</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <a href="/" class="logo">leehoseok</a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Curtain -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/blog" class="nav-item">/archive</a>
+    <a href="/projects" class="nav-item">/project</a>
+    <a href="/drawings" class="nav-item">/drawing</a>
+    <a href="/pictures" class="nav-item">/picture</a>
+    <a href="/about" class="nav-item">/about</a>
+    <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+  </nav>
+
+  <div class="wrapper">
+    <!-- Desktop Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="logo">
+          <a href="/">leehoseok</a>
+        </div>
+        <ul class="nav-menu">
+          <li ><a href="/blog">/archive</a></li>
+          <li class="active"><a href="/projects">/project</a></li>
+          <li ><a href="/drawings">/drawing</a></li>
+          <li ><a href="/pictures">/picture</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="/about" class="nav-item">/about</a>
+        <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <article class="project-detail">
+  <header style="margin-bottom: 60px;">
+    <h1 style="font-size: 40px; font-weight: 800; margin-bottom: 10px;">히든프라이스</h1>
+    <p style="font-size: 18px; color: #888;">히든프라이스 앱 신규 런칭 및 유지보수</p>
+  </header>
+
+  
+  
+    <div style="margin-bottom: 60px;">
+      <img src="/assets/images/projects/hiddenprice1.jpg" alt="히든프라이스" style="max-width: 100%; border: 1px solid #333;">
+    </div>
+  
+
+  <div class="project-content" style="font-size: 17px; line-height: 1.8; color: #ccc;">
+    <p><em>2018.09 ~ 2019.11<span class="pipe-separator">|</span>iOS 앱 개발<span class="pipe-separator">|</span>팀장</em></p>
+
+<p>위메프의 신규 특가 서비스인 ‘히든프라이스’ 앱의 초기 설계부터 런칭, 유지보수 전 과정을 총괄했습니다. 대규모 트래픽이 집중되는 특가 판매 환경에 최적화된 앱 구조를 설계하고, 직관적인 UI/UX 구현으로 빠른 사용자 확보에 기여했습니다.</p>
+
+<h3 id="주요-성과">[주요 성과]</h3>
+<ul>
+  <li><strong>신규 서비스 성공적 런칭</strong>: 프로젝트 킥오프부터 마켓 출시까지의 전 과정을 리딩하여 안정적인 서비스 런칭 달성</li>
+  <li><strong>특가 서비스 최적화</strong>: 타임 세일 등 트래픽이 집중되는 시점에도 안정적으로 동작하는 데이터 캐싱 및 뷰 렌더링 최적화</li>
+  <li><strong>사용자 경험 극대화</strong>: 위메프의 커머스 운영 노하우를 녹여낸 UI 설계로 높은 전환율 및 재방문율 유도</li>
+</ul>
+
+<h3 id="기술적-고도화">[기술적 고도화]</h3>
+<ul>
+  <li><strong>Swift 기반 아키텍처 설계</strong>: 프로젝트 초기부터 Swift를 전면 도입하여 생산성을 높이고 유지보수가 용이한 아키텍처 구축</li>
+  <li><strong>하이브리드 앱 인터페이스 고도화</strong>: 효율적인 서비스 운영을 위해 웹-앱 간 고성능 브릿지 통신 환경 구축 및 WKWebView 최적화</li>
+  <li><strong>실시간 이벤트 대응</strong>: 푸시 알림 및 실시간 데이터를 연동하여 특가 정보 도달 가속화 및 유저 리텐션 강화</li>
+  <li><strong>마케팅 툴 통합</strong>: 앱 설치 분석 및 이벤트 트래킹을 위한 다양한 분석 툴(Appsflyer, Firebase) 연동 및 무결성 검증</li>
+</ul>
+
+<h3 id="기술-스택">[기술 스택]</h3>
+<ul>
+  <li><strong>Language &amp; Library</strong>: Swift, Alamofire, SnapKit, SDWebImage, SwiftyJSON</li>
+  <li><strong>Marketing &amp; Ops</strong>: Firebase (Analytics, Crashlytics), Appsflyer (OneLink), Branch</li>
+</ul>
+
+  </div>
+</article>
+
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target)) {
+        mobileNav.classList.remove('active');
+      }
+    });
+
+    // Close menu when clicking a nav item
+    const navItems = mobileNav.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,44 +1,29 @@
 ---
-title: 위메프
-description: 2013.07 - 2019.12 (6년 6개월)
-image: wemap0.jpg
-date: 2013-07-08
+layout: project
+title: "위메프"
+company: "위메프"
+description: "위메프 앱 개발 및 유지보수 총괄"
+period: "2013.07 - 2019.12"
+thumbnail: "/assets/images/projects/wemap0.jpg"
+header_image: "/assets/images/projects/wemap1.jpg"
 ---
-[![link](/assets/images/projects/wemap1.jpg)][app link]
 
-<h2>개요</h2>
-2013년 소셜커머스 3사가 한창 경쟁구도일 때, 당시 2등이었던 위메프를 선택하였고
-1등인 C사를 턱밑까지 추격하는데 큰 역할을 수행하였습니다.
-당시 불안정하던 앱 내에 `Fabric Crachlytics`를 도입하여 이슈를 추적하고
-안정화에 주력하여 DAU 200k의 쾌거를 이루었습니다.
-iOS 앱 메인 개발 및 팀 업무 할당 / 기획 / 디자인 / QA까지, 전반적인 서비스 전체 업무 협의 진행하였습니다.
+*2013.07 - 2019.12 \| iOS 앱 개발 \| 팀장*
 
-<h2>주요업무</h2>
-- 중복된 여러 클래스의 리스트를 공용 딜리스트로 모듈화
-- `UIWebView` > `WKWebView` 마이그레이션
-- `WKWebView Javascript Handler` 연동
-- `edge swift back`으로 인한 `screen lock` 이슈 수정
-- `deeplink` 설계 및 테스트 `HTML` 페이지 작성
-- `universal` 해상도 지원으로 `iPad` 설치 가능
-- `Apple Watch` 앱 추가 개발
-- `non-ARC` > `ARC` 컨버팅
-- `FCM` 도입 및 기존 `APNS` 인증서 방식에서 인증 `key` 방식으로 변경
-- `iTunes Connect` 계정관리 및 `Ad-Hoc` `Test Flight` 병행 배포
-<div class="hyde tags skills">
-    <a class="hyde tag">Firebase Messaging</a>
-    <a class="hyde tag">Analytics</a>
-    <a class="hyde tag">Fabric</a>
-    <a class="hyde tag">Branch</a>
-    <a class="hyde tag">Facebook</a>
-    <a class="hyde tag">SwiftyJson</a>
-    <a class="hyde tag">SnapKit</a>
-    <a class="hyde tag">Alamofire</a>
-    <a class="hyde tag">SDWebImage</a>
-    <a class="hyde tag">TTTAttributedLabel</a>
-</div>
+소셜커머스 초기 시장의 급격한 성장 단계에서 iOS 메인 개발 및 팀 리딩을 전담했습니다. 불안정한 초기 앱의 Crash Rate를 획기적으로 개선하고 서비스 전반의 현대화를 주도하여 DAU 200k 달성과 시장 점유율 확장에 기여했습니다.
 
-<h2>관련링크</h2>
-[[Platum] 위메프, 2019년 거래액 6.4조 규모 전년비 18.5%↑](https://platum.kr/archives/139294)<br>
-[[IT데일리] 위메프, 애플워치용 앱 출시](http://www.itdaily.kr/news/articleView.html?idxno=66070)
+### [주요 성과]
+*   **서비스 안정화 및 신뢰도 향상**: Fabric 도입을 통한 체계적 이슈 추적, 앱 안정성 확보로 폭발적인 유저 유입(DAU 200k) 달성
+*   **서비스 고도화 주도**: 기획, 디자인, QA 전 과정을 아우르는 크로스 기능 협업 및 팀 업무 리딩
+*   **플랫폼 확장성 확보**: Universal 해상도 대응을 통한 iPad 지원 및 Apple Watch 앱 초기 개발 등 신규 디바이스 커버리지 확장
 
-[app link]: itms-apps://itunes.apple.com/app/449141904
+### [기술적 고도화]
+*   **앱 아키텍처 현대화**: Non-ARC 기반 레거시 코드를 ARC 컨버팅하여 메모리 관리 최적화 및 런타임 안정성 제고
+*   **WebView 고도화**: UIWebView에서 WKWebView로의 전면 마이그레이션 및 안정적인 자바스크립트 인터페이스 연동 환경 구축
+*   **푸시 인프라 개선**: 기존 APNS 인증서 방식에서 FCM 인증 Key 방식 전환하여 관리 효율성 및 푸시 도달률 개선
+*   **코드 모듈화**: 중복된 다중 클래스 리스트를 공용 모듈로 통합 설계하여 코드 재사용성 및 유지보수 효율 증대
+*   **DeepLink 생태계 구축**: 마케팅 성과 추적을 위한 Branch 및 Deeplink 구조 설계와 사내 테스트 환경(HTML 기반) 구축
+
+### [기술 스택]
+*   **Language & Library**: Objective-C, Swift, Alamofire, SnapKit, SDWebImage, SwiftyJSON
+*   **Marketing & Ops**: Firebase (FCM, Analytics), Appsflyer (OneLink), WatchKit, Fabric, Branch

@@ -1,37 +1,29 @@
 ---
-title: Showa
-description: 2020.01 - 2021.09 (1년 9개월)
-image: showa0.jpg
-date: 2020-01-02
+layout: project
+title: "Showa"
+company: "블룸에이아이"
+description: "신규 커머스 앱 Showa 개발 및 런칭 총괄"
+period: "2020.01 - 2021.09"
+thumbnail: "/assets/images/projects/showa0.jpg"
+header_image: "/assets/images/projects/showa1.jpg"
 ---
-[![link](/assets/images/projects/showa1.jpg)][web link]
-[![link](/assets/images/projects/showa2.jpg)][web link]
-<h2>개요</h2>
-온라인 여성 패션 플랫폼 앱으로, '21년 3월 최초 출시, 6월부터 마케팅 진행하여 앱 DAU 10k의 성과를 보였습니다. 팀 구성은 back/front-end, iOS/Android, 디자이너, 기획자로 구성되어 있으며 실무와 팀 관리 병행하여 업무 진행하였습니다. 합류 당시 구성원 대부분 모바일 서비스에 이해도가 부족했고, 관련하여 플랫폼별 특성, 배포/업데이트 앱 서비스 전반적인 지식 전파를 위해 Confluence 가이드 문서 작성하였습니다. 또한 디자인이나 기획 업무 진행 시 플랫폼별 가이드 준수토록 제안하였습니다.<br>
 
-<h2>주요업무</h2>
-- 프로젝트 초기 설계부터 출시, 유지보수
-- back-end 담당자와 플랫폼별 API 협의 및 공유
-- `UICollectionView` `UICollectionViewFlowLayout` 리스트 구현
-- `JWT token`으로 사용자 로그인 처리
-- `Naver` `Kakao` `Apple` 간편 로그인 적용
-- `WKWebView URL hook` 방식 적용
-- `deeplink` 설계 및 테스트 가능한 페이지 제작
-- `iTunes Connect` 계정관리 및 `Ad-Hoc` `TestFlight` 병행 배포
-- 운영 요청건 협의 및 팀원 관리
+*2020.01 - 2021.09 \| iOS 앱 개발 \| 팀장*
 
-<div class="hyde tags skills">
-    <a class="hyde tag">Firebase Messaging</a>
-    <a class="hyde tag">Analytics</a>
-    <a class="hyde tag">Crashlytics</a>
-    <a class="hyde tag">Appsflyer</a>
-    <a class="hyde tag">SwiftyJson</a>
-    <a class="hyde tag">SnapKit</a>
-    <a class="hyde tag">Alamofire</a>
-    <a class="hyde tag">SDWebImage</a>
-</div>
+신규 여성 패션 플랫폼 'Showa'의 초기 아키텍처 설계부터 런칭, 유지보수 전 과정을 주도했습니다. 모바일 서비스 미경험 조직 내에서 개발 프로세스 가이드를 수립하며, 출시 3개월 만에 DAU 10k 달성의 기술적 토대를 마련했습니다.
 
-<h2>관련링크</h2>
-[[APP ANNIE] 2분기 한국 패션 쇼핑 앱 TOP10 공개](https://blog.naver.com/venturesquare_/222491194975)
+### [주요 성과]
+*   **성공적인 서비스 런칭**: 프로젝트 제로 베이스에서 시작하여 앱 초기 설계, 스토어 출시 및 안정적 유지보수 프로세스 구축
+*   **조직 역량 강화 및 표준화**: 모바일 플랫폼 가이드 수립, Confluence 내 배포 프로세스 문서화, 모바일 서비스 이해도 상향 평준화
+*   **크로스 기능 협업 리딩**: 디자인/기획 단계에서 플랫폼별 가이드를 준수하도록 제안하여 개발 리소스 낭비 방지 및 UI/UX 정합성 확보
 
-[web link]: https://cellook.kr
+### [기술적 고도화]
+*   **기본 디자인**: UICollectionView 기반의 유연한 레이아웃 설계로 패션 커머스 특유의 복잡한 상품 리스트 인터페이스 구현
+*   **그로스 마케팅 구축**: Appsflyer 기반의 딥링크 시스템 설계 및 테스트 환경 구축, 마케팅 성과 측정 및 사용자 유입 경로 최적화
+*   **보안/인증**: JWT 기반 인증 체계와 Naver/Kakao/Apple 등 주요 소셜 로그인 연동으로 사용자 접근성 강화
+*   **하이브리드 브릿지 고도화**: WKWebView URL Hook 방식을 활용한 하이브리드 인터페이스 연동 및 API 규격 협의 주도
+
+### [기술 스택]
+*   **Language & Library**: Swift, SnapKit, Alamofire, SDWebImage, SwiftyJson, Social Login(Apple/Kakao/Naver)
+*   **Marketing & Ops**: Firebase (FCM, Analytics, Crashlytics), Appsflyer (OneLink)
+*   **Tooling**: Xcode, Git, Jira, Confluence, Figma, Zeplin
