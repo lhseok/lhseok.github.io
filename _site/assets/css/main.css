@@ -148,7 +148,15 @@ ul {
   height: 100%;
 }
 .mobile-header .logo .ascii-logo {
-  font-size: 4px; /* Smaller for mobile header */
+  display: none;
+}
+.mobile-header .logo .prompt-logo {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  align-items: center;
 }
 
 .hamburger {
@@ -221,9 +229,12 @@ ul {
   border-bottom: 1px solid #333333;
   padding-bottom: 15px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .section-title {
     font-size: 16px;
+  }
+  .section-title:first-of-type {
+    display: none;
   }
 }
 
@@ -332,7 +343,10 @@ ul {
 .year-section {
   display: flex;
   align-items: center;
-  margin: 60px 0 10px; /* Further reduced bottom margin to 10px */
+  margin: 60px 0 10px;
+}
+.year-section:first-of-type {
+  margin-top: 0;
 }
 .year-section .year-title {
   font-size: 28px;

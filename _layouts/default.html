@@ -1,3 +1,17 @@
+{% assign section = "home" %}
+{% if page.url == "/" %}
+  {% assign section = "home" %}
+{% elsif page.url contains "/blog" or page.layout == "post" %}
+  {% assign section = "archives" %}
+{% elsif page.url contains "/projects" or page.layout == "project" %}
+  {% assign section = "projects" %}
+{% elsif page.url contains "/drawings" %}
+  {% assign section = "drawings" %}
+{% elsif page.url contains "/pictures" %}
+  {% assign section = "pictures" %}
+{% elsif page.url contains "/about" %}
+  {% assign section = "about" %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -16,13 +30,15 @@
       <span class="ascii-logo">
 _      _____ _____ _   _  _____  _____  _____  _   __
 | |    |  ___|  ___| | | ||  _  ||  ___||  _  || | / /
-| |    | |__ | |__ | |_| || | | || |__  | | | || |/ / 
+| |    | |__ | |__ | |_| || | | ||  __  | | | || |/ / 
 | |    |  __||  __||  _  || | | ||  __| | | | ||    \ 
 | |____| |___| |___| | | |\ \_/ /| |___ \ \_/ /| |\  \
 \_____/\____/\____/\_| |_/ \___/ \____/  \___/ \_| \_/
       </span>
+      <span class="prompt-logo">leehoseok@{{ section }}><span class="cursor"></span></span>
     </a>
     <div class="hamburger" id="hamburger">
+
       <span></span>
       <span></span>
       <span></span>
