@@ -7,13 +7,21 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Mobile Header -->
   <header class="mobile-header">
-    <a href="/" class="logo">leehoseok</a>
+    <a href="/" class="logo">
+      <span class="ascii-logo">
+_      _____ _____ _   _  _____  _____  _____  _   __
+| |    |  ___|  ___| | | ||  _  ||  ___||  _  || | / /
+| |    | |__ | |__ | |_| || | | || |__  | | | || |/ / 
+| |    |  __||  __||  _  || | | ||  __| | | | ||    \ 
+| |____| |___| |___| | | |\ \_/ /| |___ \ \_/ /| |\  \
+\_____/\____/\____/\_| |_/ \___/ \____/  \___/ \_| \_/
+      </span>
+    </a>
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
@@ -36,7 +44,16 @@
     <aside class="sidebar">
       <div>
         <div class="logo">
-          <a href="/">leehoseok</a>
+          <a href="/">
+            <span class="ascii-logo">
+ _      _____ _____ _   _  _____  _____  _____  _   __
+| |    |  ___|  ___| | | ||  _  ||  ___||  _  || | / /
+| |    | |__ | |__ | |_| || | | || |__  | | | || |/ / 
+| |    |  __||  __||  _  || | | ||  __| | | | ||    \ 
+| |____| |___| |___| | | |\ \_/ /| |___ \ \_/ /| |\  \
+\_____/\____/\____/\_| |_/ \___/ \____/  \___/ \_| \_/
+            </span>
+          </a>
         </div>
         <ul class="nav-menu">
           <li class="active"><a href="/blog">/archive</a></li>
@@ -49,32 +66,104 @@
       <div class="sidebar-footer">
         <a href="/about" class="nav-item">/about</a>
         <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+        
+        <div class="personal-signature">
+          commit. push. pray.
+          crafted by leehoseok
+        </div>
       </div>
     </aside>
 
     <!-- Main Content Area -->
     <main class="main-content">
-      <h1 class="section-title">Archives</h1>
+      <h1 class="section-title">
+  leehoseok@archives><span class="cursor"></span>
+</h1>
+
+<div id="filter-status" style="margin-bottom: 20px; display: none; align-items: center; gap: 15px;">
+  <span id="active-tag-label" style="background: rgba(66, 135, 245, 0.2); border: 1px solid rgba(66, 135, 245, 0.5); padding: 5px 15px; border-radius: 20px; font-size: 14px;"></span>
+  <a href="/blog" style="font-size: 14px; color: #888; text-decoration: underline;">Reset Filter</a>
+</div>
 
 
 
 
-  <h2 style="margin: 40px 0 20px; font-size: 24px; color: #fff; border-left: 4px solid #444; padding-left: 15px;">2026</h2>
-  <div class="archive-list">
-    
-      <div class="archive-item">
-        <span class="date">05.07</span>
-        <a href="/2026/05/07/1649.html" class="title">정리</a>
-        <div class="tags">
-          
-            #일상 
-          
+  <section class="year-group" data-year="2026">
+    <div class="year-section">
+      <h2 class="year-title">2026</h2>
+      <span class="post-count">1 post</span>
+    </div>
+    <div class="archive-list">
+      
+        <div class="archive-item" data-tags="일상">
+          <div class="date-area">2026.05.07</div>
+          <div class="title-area">
+            <a href="/2026/05/07/1649.html" class="title">정리</a>
+          </div>
         </div>
-      </div>
+      
+    </div>
+  </section>
+
+
+<script>
+function filterByTag(tag) {
+  const url = new URL(window.location);
+  url.searchParams.set('tag', tag);
+  window.history.pushState({}, '', url);
+  applyFilter();
+}
+
+function applyFilter() {
+  const params = new URLSearchParams(window.location.search);
+  const tag = params.get('tag');
+  const filterStatus = document.getElementById('filter-status');
+  const activeTagLabel = document.getElementById('active-tag-label');
+  const items = document.querySelectorAll('.archive-item');
+  const sections = document.querySelectorAll('.year-group');
+
+  if (tag) {
+    filterStatus.style.display = 'flex';
+    activeTagLabel.textContent = '#' + tag;
     
-  </div>
+    items.forEach(item => {
+      const itemTags = item.getAttribute('data-tags').split(',');
+      if (itemTags.includes(tag)) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    // Hide year sections if all items in them are hidden
+    sections.forEach(section => {
+      const visibleItems = section.querySelectorAll('.archive-item[style="display: flex;"]');
+      if (visibleItems.length === 0) {
+        section.style.display = 'none';
+      } else {
+        section.style.display = 'block';
+      }
+    });
+  } else {
+    filterStatus.style.display = 'none';
+    items.forEach(item => item.style.display = 'flex');
+    sections.forEach(section => section.style.display = 'block');
+  }
+}
+
+// Apply filter on page load
+window.addEventListener('popstate', applyFilter);
+document.addEventListener('DOMContentLoaded', applyFilter);
+</script>
 
 
+      <!-- Mobile Footer -->
+      <footer class="mobile-footer">
+        <div class="personal-signature">
+          commit. push. pray.
+          crafted by leehoseok
+        </div>
+      </footer>
     </main>
   </div>
 

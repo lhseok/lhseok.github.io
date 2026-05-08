@@ -3,17 +3,17 @@ layout: default
 ---
 
 <article class="post">
-  <header style="margin-bottom: 60px;">
-    <h1 style="font-size: 40px; font-weight: 800; margin-bottom: 10px;">{{ page.title }}</h1>
-    <div style="color: #888; font-size: 14px;">
-      {{ page.date | date: "%Y년 %m월 %d일" }}
-      {% if page.tags.size > 0 %}
-        <span class="pipe-separator">|</span> {% for tag in page.tags %}#{{ tag }} {% endfor %}
-      {% endif %}
+  <header class="post-header">
+    <div class="post-date">{{ page.date | date: "%Y년 %m월 %d일" }}</div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-tags">
+      {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}/blog?tag={{ tag }}" class="tag-item">#{{ tag }}</a>
+      {% endfor %}
     </div>
   </header>
 
-  <div class="post-content" style="font-size: 17px; line-height: 1.8; color: #ccc;">
-    {{ content | replace: ' | ', '<span class="pipe-separator">|</span>' }}
+  <div class="post-content">
+    {{ content }}
   </div>
 </article>

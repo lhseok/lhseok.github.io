@@ -69,10 +69,27 @@ ul {
 
 /* --- Sidebar Components --- */
 .logo {
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: -1px;
+  font-family: 'Courier New', Courier, monospace;
   margin-bottom: 60px;
+  line-height: 1.2;
+  
+  .ascii-logo {
+    font-size: 6px;
+    font-weight: 800;
+    white-space: pre;
+    color: $accent-color;
+    display: block;
+  }
+  
+  .home-prompt {
+    font-size: 20px;
+    font-weight: 700;
+    color: $accent-color;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
 }
 
 .nav-menu li {
@@ -80,6 +97,8 @@ ul {
   font-size: 18px;
   font-weight: 500;
   color: $text-muted;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: -0.02em;
   &.active {
     color: $accent-color;
   }
@@ -96,6 +115,30 @@ ul {
   margin-bottom: 10px;
   font-size: 14px;
   color: $text-muted;
+}
+
+.personal-signature {
+  margin-top: 30px;
+  font-size: 10px;
+  color: #333;
+  line-height: 1.4;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-line;
+  letter-spacing: -0.2px;
+  text-align: right; /* Desktop Sidebar: Right align */
+}
+
+.mobile-footer {
+  display: none;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid $border-color;
+  padding-bottom: 40px;
+  
+  .personal-signature {
+    text-align: center; /* Mobile Footer: Center align */
+    margin-top: 0;
+  }
 }
 
 /* --- Mobile Header --- */
@@ -115,10 +158,13 @@ ul {
 
   .logo {
     margin-bottom: 0;
-    font-size: 20px;
     display: flex;
     align-items: center;
     height: 100%;
+    
+    .ascii-logo {
+      font-size: 4px; /* Smaller for mobile header */
+    }
   }
 }
 
@@ -185,11 +231,19 @@ ul {
 
 /* --- Page Specific Styles --- */
 .section-title {
-  font-size: 32px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 40px;
+  color: $text-color;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid $border-color;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .career-item {
@@ -285,24 +339,131 @@ ul {
   }
 }
 
-/* --- Project Detail Styles --- */
-.project-detail img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  display: block;
-  margin: 40px 0;
-  border: 1px solid $border-color;
+/* --- Archive List Styles --- */
+.year-section {
+  display: flex;
+  align-items: center;
+  margin: 60px 0 10px; /* Further reduced bottom margin to 10px */
+  
+  .year-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-right: 15px;
+    color: #fff;
+  }
+  
+  .post-count {
+    font-size: 13px;
+    font-weight: 500;
+    color: $text-muted;
+    border: 1px solid $border-color;
+    border-radius: 20px;
+    padding: 2px 12px;
+  }
 }
 
-.project-content {
-  h2 { font-size: 24px; margin: 40px 0 20px; color: $accent-color; }
-  h3 { font-size: 20px; margin: 30px 0 15px; color: #fff; }
-  h4 { font-size: 18px; margin: 20px 0 10px; color: #ddd; }
-  ul { padding-left: 20px; margin-bottom: 20px; list-style: disc; }
-  li { margin-bottom: 8px; }
-  p { margin-bottom: 20px; }
-  em { color: $text-muted; font-style: italic; }
+.archive-list {
+  border-top: none;
+}
+
+.archive-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid $border-color;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  .date-area {
+    width: 110px; /* Reduced width from 150px to 110px to bring title closer */
+    flex-shrink: 0;
+    color: $text-muted;
+    font-size: 15px;
+  }
+  
+  .title-area {
+    flex: 1;
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #7bb5f1;
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+/* --- Tag Styles --- */
+.tag-item {
+  display: inline-block;
+  font-size: 13px;
+  color: $text-muted;
+  padding: 2px 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  &:hover {
+    border-color: rgba(123, 181, 241, 0.5);
+    background-color: rgba(123, 181, 241, 0.2);
+    color: #7bb5f1;
+    opacity: 1;
+  }
+}
+
+/* --- Post Detail Styles --- */
+.post-header {
+  margin-bottom: 60px;
+  
+  .post-date {
+    color: $text-muted;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .post-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.2;
+  }
+  
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.post-content {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #ccc;
+  
+  h2 { font-size: 26px; margin: 50px 0 25px; color: #fff; font-weight: 700; }
+  h3 { font-size: 22px; margin: 40px 0 20px; color: #eee; font-weight: 600; }
+  p { margin-bottom: 24px; }
+  img { max-width: 100%; height: auto; border-radius: 8px; margin: 30px 0; border: 1px solid $border-color; }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .archive-item {
+    flex-direction: column;
+    align-items: flex-start;
+    .date-area {
+      width: auto;
+      margin-bottom: 8px;
+    }
+  }
+  .post-header .post-title {
+    font-size: 32px;
+  }
 }
 
 /* --- Common Components --- */
@@ -324,7 +485,7 @@ ul {
   justify-content: flex-start;
   align-items: flex-start;
   font-family: 'Courier New', Courier, monospace;
-  margin-top: 64px; /* Align with sidebar's first menu item */
+  margin-top: 64px;
 }
 
 @media (max-width: 992px) {
@@ -352,10 +513,10 @@ ul {
 
 .cursor {
   display: inline-block;
-  width: 2px;
+  width: 8px;
   height: 1.1em;
   background-color: $accent-color;
-  margin-left: 2px;
+  margin-left: 4px;
   animation: blink 1s step-end infinite;
   vertical-align: middle;
 }
@@ -365,7 +526,107 @@ ul {
   50% { opacity: 0; }
 }
 
+/* --- Swift Code Styles --- */
+.swift-code-container {
+  margin-top: 20px;
+  line-height: 1.8;
+  color: $text-muted;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  white-space: pre-wrap;
+  
+  .keyword {
+    color: #bf95fa;
+    font-weight: 700;
+  }
+
+  .string {
+    color: #ff8170;
+  }
+
+  .type, .function {
+    color: #acf2e4;
+  }
+
+  .white {
+    color: $accent-color;
+  }
+
+  .comment {
+    color: #6a9955;
+  }
+
+  .code-line {
+    display: block;
+    position: relative;
+    padding: 0 10px;
+    margin: 0 -10px;
+    min-height: 1.8em;
+    transition: background-color 0.3s ease;
+
+    &.is-error {
+      background-color: #3e2d32;
+      
+      .error-message {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+      }
+    }
+
+    .error-message {
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%) translateX(10px);
+      color: #fff;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 2px 8px;
+      background-color: #85373a;
+      border-radius: 4px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      pointer-events: none;
+      opacity: 0;
+      transition: all 0.3s ease 0.2s;
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    .error-icon {
+      width: 14px;
+      height: 14px;
+      background-color: #f44336;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+
+      &::after {
+        content: '✕';
+        color: #fff;
+        font-size: 8px;
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+
+    .error-underline {
+      border-bottom: 2px solid #ff4245;
+      padding-bottom: 1px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
+  .swift-code-container {
+    font-size: 14px;
+  }
   .ascii-art {
     font-size: 4px;
   }

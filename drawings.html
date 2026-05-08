@@ -4,7 +4,9 @@ title: Drawings
 permalink: /drawings
 ---
 
-<h1 class="section-title">Drawings</h1>
+<h1 class="section-title">
+  leehoseok@drawings><span class="cursor"></span>
+</h1>
 
 <div class="grid-container">
   {% assign sorted_drawings = site.drawings | sort: 'date' | reverse %}
@@ -98,9 +100,5 @@ permalink: /drawings
   function handleGesture() {
     if (touchendX < touchstartX - 50) changeImage(1);
     if (touchendX > touchstartX + 50) changeImage(-1);
-  }
-</script>
-).innerText = date;
-    document.getElementById('lightbox').style.display = 'flex';
   }
 </script>

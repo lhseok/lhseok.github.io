@@ -7,13 +7,21 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Mobile Header -->
   <header class="mobile-header">
-    <a href="/" class="logo">leehoseok</a>
+    <a href="/" class="logo">
+      <span class="ascii-logo">
+_      _____ _____ _   _  _____  _____  _____  _   __
+| |    |  ___|  ___| | | ||  _  ||  ___||  _  || | / /
+| |    | |__ | |__ | |_| || | | || |__  | | | || |/ / 
+| |    |  __||  __||  _  || | | ||  __| | | | ||    \ 
+| |____| |___| |___| | | |\ \_/ /| |___ \ \_/ /| |\  \
+\_____/\____/\____/\_| |_/ \___/ \____/  \___/ \_| \_/
+      </span>
+    </a>
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
@@ -36,7 +44,16 @@
     <aside class="sidebar">
       <div>
         <div class="logo">
-          <a href="/">leehoseok</a>
+          <a href="/">
+            <span class="ascii-logo">
+ _      _____ _____ _   _  _____  _____  _____  _   __
+| |    |  ___|  ___| | | ||  _  ||  ___||  _  || | / /
+| |    | |__ | |__ | |_| || | | || |__  | | | || |/ / 
+| |    |  __||  __||  _  || | | ||  __| | | | ||    \ 
+| |____| |___| |___| | | |\ \_/ /| |___ \ \_/ /| |\  \
+\_____/\____/\____/\_| |_/ \___/ \____/  \___/ \_| \_/
+            </span>
+          </a>
         </div>
         <ul class="nav-menu">
           <li ><a href="/blog">/archive</a></li>
@@ -49,29 +66,42 @@
       <div class="sidebar-footer">
         <a href="/about" class="nav-item">/about</a>
         <a href="mailto:lhseok0228@gmail.com" class="nav-item">/contact</a>
+        
+        <div class="personal-signature">
+          commit. push. pray.
+          crafted by leehoseok
+        </div>
       </div>
     </aside>
 
     <!-- Main Content Area -->
     <main class="main-content">
       <article class="post">
-  <header style="margin-bottom: 60px;">
-    <h1 style="font-size: 40px; font-weight: 800; margin-bottom: 10px;">정리</h1>
-    <div style="color: #888; font-size: 14px;">
-      2026년 05월 07일
+  <header class="post-header">
+    <div class="post-date">2026년 05월 07일</div>
+    <h1 class="post-title">정리</h1>
+    <div class="post-tags">
       
-        <span class="pipe-separator">|</span> #일상 
+        <a href="/blog?tag=일상" class="tag-item">#일상</a>
       
     </div>
   </header>
 
-  <div class="post-content" style="font-size: 17px; line-height: 1.8; color: #ccc;">
+  <div class="post-content">
     <p>미뤄왔던 블로그 레이아웃 변경 및 폴더 정리 완료.</p>
 
 
   </div>
 </article>
 
+
+      <!-- Mobile Footer -->
+      <footer class="mobile-footer">
+        <div class="personal-signature">
+          commit. push. pray.
+          crafted by leehoseok
+        </div>
+      </footer>
     </main>
   </div>
 
