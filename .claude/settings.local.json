@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(bundle lock *)",
+      "Bash(figlet -f big \"LEEMILY\")",
+      "Bash(figlet \"LEEMILY\")",
+      "Bash(python3 *)",
+      "Bash(brew install *)",
+      "Bash(figlet -f banner3 \"LEEMILY\")",
+      "Bash(rsync *)",
+      "Bash(bundle exec *)",
+      "Bash(bundle install *)"
+    ]
+  }
+}
