@@ -1,9 +1,6 @@
 
 User-agent: *
-Allow: /
-
-#구글 워닝 제거
-#Content-Signal: search=yes,ai-train=no
+Disallow: /cdn-cgi/
 
 User-agent: Amazonbot
 Disallow: /
@@ -31,6 +28,5 @@ Disallow: /
 
 User-agent: meta-externalagent
 Disallow: /
-
 
 Sitemap: https://lhseok.github.io/sitemap.xml
