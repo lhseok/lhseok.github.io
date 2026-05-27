@@ -434,27 +434,36 @@ ul {
   gap: 10px;
 }
 
-.post-content {
+.post-content, .project-content {
   font-size: 17px;
   line-height: 1.8;
   color: #ccc;
 }
-.post-content h2 {
+.post-content h2, .project-content h2 {
   font-size: 26px;
   margin: 50px 0 25px;
   color: #fff;
   font-weight: 700;
 }
-.post-content h3 {
+.post-content h3, .project-content h3 {
   font-size: 22px;
   margin: 40px 0 20px;
   color: #eee;
   font-weight: 600;
 }
-.post-content p {
+.post-content p, .project-content p {
   margin-bottom: 24px;
 }
-.post-content img {
+.post-content ul, .post-content ol, .project-content ul, .project-content ol {
+  margin-bottom: 24px;
+  padding-left: 20px;
+  list-style: disc;
+}
+.post-content ul li, .post-content ol li, .project-content ul li, .project-content ol li {
+  margin-bottom: 10px;
+  list-style: inherit;
+}
+.post-content img, .project-content img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
