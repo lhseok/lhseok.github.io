@@ -17,6 +17,16 @@ else if (pathname.startsWith('/drawings')) section = 'drawings';
 else if (pathname.startsWith('/pictures')) section = 'pictures';
 else if (pathname.startsWith('/about')) section = 'about';
 
+const sectionLinks: Record<string, string> = {
+  home: '/',
+  blog: '/blog',
+  projects: '/projects',
+  drawings: '/drawings',
+  pictures: '/pictures',
+  about: '/about',
+};
+const sectionHref = sectionLinks[section] ?? '/';
+
 const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 ---
 
@@ -34,7 +44,7 @@ const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 
   <!-- Mobile Header -->
   <header class="mobile-header">
-    <a href="/" class="logo">
+    <div class="logo">
       <span class="ascii-logo">
 _      _____ _____ _   _  _____  _____  _____  _   __
 | |    |  ___|  ___| | | ||  _  ||  ___||  _  || | / /
@@ -43,8 +53,8 @@ _      _____ _____ _   _  _____  _____  _____  _   __
 | |____| |___| |___| | | |\ \_/ /| |___ \ \_/ /| |\  \
 \_____/\____/\____/\_| |_/ \___/ \____/  \___/ \_| \_/
       </span>
-      <span class="prompt-logo">leehoseok@{section}><span class="cursor"></span></span>
-    </a>
+      <span class="prompt-logo"><a href="/" class="prompt-leehoseok">leehoseok</a><span class="prompt-at-section">@<a href={sectionHref}>{section}</a></span>&gt;<span class="cursor"></span></span>
+    </div>
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
