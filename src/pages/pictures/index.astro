@@ -1,0 +1,19 @@
+---
+import Default from '../../layouts/Default.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import { getCollection } from 'astro:content';
+
+const sortedPictures = (await getCollection('pictures')).sort((a, b) =>
+  b.data.date.getTime() - a.data.date.getTime()
+);
+
+const items = sortedPictures.map(p => ({ src: p.data.image, title: p.data.title }));
+---
+
+<Default title="Pictures">
+  <h1 class="section-title">
+    leehoseok@pictures><span class="cursor"></span>
+  </h1>
+
+  <Lightbox items={items} />
+</Default>

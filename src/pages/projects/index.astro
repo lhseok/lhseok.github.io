@@ -1,0 +1,32 @@
+---
+import Default from '../../layouts/Default.astro';
+import { getCollection } from 'astro:content';
+
+const sortedProjects = (await getCollection('projects')).sort((a, b) =>
+  b.data.period.localeCompare(a.data.period)
+);
+---
+
+<Default title="Projects">
+  <h1 class="section-title">
+    leehoseok@projects><span class="cursor"></span>
+  </h1>
+
+  <div class="grid-container">
+    {sortedProjects.map(project => (
+      <a href={`/projects/${project.id}`} class="thumbnail-card">
+        <div class="thumbnail-img">
+          {project.data.thumbnail
+            ? <img src={project.data.thumbnail} alt={project.data.title}>
+            : <div class="no-image">No Image</div>}
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <h3 class="card-title">{project.data.title}</h3>
+            <span class="card-date">{project.data.period.replace(' - ', ' ~ ')}</span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</Default>

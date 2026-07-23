@@ -1,0 +1,30 @@
+---
+import Default from './Default.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  headerImage?: string;
+}
+
+const { title, description, headerImage } = Astro.props;
+---
+
+<Default title={title}>
+  <article class="project-detail">
+    <header style="margin-bottom: 60px;">
+      <h1 style="font-size: 40px; font-weight: 800; margin-bottom: 10px;">{title}</h1>
+      {description && <p style="font-size: 18px; color: #888;">{description}</p>}
+    </header>
+
+    {headerImage && (
+      <div style="margin-bottom: 60px;">
+        <img src={headerImage} alt={title} style="max-width: 100%; border: 1px solid #333;">
+      </div>
+    )}
+
+    <div class="project-content">
+      <slot />
+    </div>
+  </article>
+</Default>

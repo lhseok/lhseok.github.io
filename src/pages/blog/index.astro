@@ -1,0 +1,101 @@
+---
+import Default from '../../layouts/Default.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = (await getCollection('blog')).sort((a, b) =>
+  b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+
+function formatDate(date: Date): string {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}.${m}.${d}`;
+}
+
+const postsByYear = allPosts.reduce<Record<string, typeof allPosts>>((acc, post) => {
+  const year = String(post.data.pubDate.getFullYear());
+  (acc[year] ??= []).push(post);
+  return acc;
+}, {});
+
+const years = Object.keys(postsByYear).sort((a, b) => b.localeCompare(a));
+---
+
+<Default title="Archives">
+  <h1 class="section-title">
+    leehoseok@archives><span class="cursor"></span>
+  </h1>
+
+  <div id="filter-status" style="margin-bottom: 20px; display: none; align-items: center; gap: 15px;">
+    <span id="active-tag-label" style="background: rgba(66, 135, 245, 0.2); border: 1px solid rgba(66, 135, 245, 0.5); padding: 5px 15px; border-radius: 20px; font-size: 14px;"></span>
+    <a href="/blog" style="font-size: 14px; color: #888; text-decoration: underline;">Reset Filter</a>
+  </div>
+
+  {years.map(year => (
+    <section class="year-group" data-year={year}>
+      <div class="year-section">
+        <h2 class="year-title">{year}</h2>
+        <span class="post-count">{postsByYear[year].length} {postsByYear[year].length > 1 ? 'posts' : 'post'}</span>
+      </div>
+      <div class="archive-list">
+        {postsByYear[year].map(post => (
+          <div class="archive-item" data-tags={post.data.tags.join(',')}>
+            <div class="date-area">{formatDate(post.data.pubDate)}</div>
+            <div class="title-area">
+              <a href={`/blog/${post.id}`} class="title">{post.data.title}</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+</Default>
+
+<script is:inline>
+function filterByTag(tag) {
+  const url = new URL(window.location);
+  url.searchParams.set('tag', tag);
+  window.history.pushState({}, '', url);
+  applyFilter();
+}
+
+function applyFilter() {
+  const params = new URLSearchParams(window.location.search);
+  const tag = params.get('tag');
+  const filterStatus = document.getElementById('filter-status');
+  const activeTagLabel = document.getElementById('active-tag-label');
+  const items = document.querySelectorAll('.archive-item');
+  const sections = document.querySelectorAll('.year-group');
+
+  if (tag) {
+    filterStatus.style.display = 'flex';
+    activeTagLabel.textContent = '#' + tag;
+
+    items.forEach(item => {
+      const itemTags = item.getAttribute('data-tags').split(',');
+      if (itemTags.includes(tag)) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    sections.forEach(section => {
+      const visibleItems = section.querySelectorAll('.archive-item[style="display: flex;"]');
+      if (visibleItems.length === 0) {
+        section.style.display = 'none';
+      } else {
+        section.style.display = 'block';
+      }
+    });
+  } else {
+    filterStatus.style.display = 'none';
+    items.forEach(item => item.style.display = 'flex');
+    sections.forEach(section => section.style.display = 'block');
+  }
+}
+
+window.addEventListener('popstate', applyFilter);
+document.addEventListener('DOMContentLoaded', applyFilter);
+</script>

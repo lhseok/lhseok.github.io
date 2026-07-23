@@ -1,0 +1,104 @@
+---
+interface Item {
+  src: string;
+  title: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="grid-container">
+  {items.map((item, index) => (
+    <div class="thumbnail-card" data-index={index}>
+      <div class="thumbnail-img">
+        <img src={item.src} alt={item.title}>
+      </div>
+    </div>
+  ))}
+</div>
+
+<!-- Simple Lightbox Container -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; align-items:center; justify-content:center; flex-direction:column; padding:20px;">
+  <div style="position:absolute; top:20px; right:20px; color:white; font-size:30px; cursor:pointer; z-index:1001;" id="lightbox-close">&times;</div>
+
+  <div style="position:absolute; top:50%; left:20px; transform:translateY(-50%); color:white; font-size:40px; cursor:pointer; user-select:none; z-index:1001; padding:20px;" id="lightbox-prev">&#10094;</div>
+  <div style="position:absolute; top:50%; right:20px; transform:translateY(-50%); color:white; font-size:40px; cursor:pointer; user-select:none; z-index:1001; padding:20px;" id="lightbox-next">&#10095;</div>
+
+  <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; flex-direction:column;" id="lightbox-backdrop">
+    <img id="lightbox-img" style="max-width:90%; max-height:80%; object-fit:contain; margin-bottom:20px;">
+    <div style="text-align:center;" id="lightbox-caption">
+      <h3 id="lightbox-title" style="margin-bottom:0px;"></h3>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ items }}>
+  let currentIndex = 0;
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxTitle = document.getElementById('lightbox-title');
+
+  function openLightbox(index) {
+    currentIndex = index;
+    updateLightbox();
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  function changeImage(step) {
+    currentIndex += step;
+    if (currentIndex >= items.length) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = items.length - 1;
+    updateLightbox();
+  }
+
+  function updateLightbox() {
+    const item = items[currentIndex];
+    lightboxImg.src = item.src;
+    lightboxTitle.innerText = item.title;
+  }
+
+  document.querySelectorAll('.thumbnail-card').forEach(card => {
+    card.addEventListener('click', () => openLightbox(Number(card.dataset.index)));
+  });
+
+  document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+  document.getElementById('lightbox-prev').addEventListener('click', () => changeImage(-1));
+  document.getElementById('lightbox-next').addEventListener('click', () => changeImage(1));
+  document.getElementById('lightbox-backdrop').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) closeLightbox();
+  });
+  document.getElementById('lightbox-img').addEventListener('click', (e) => e.stopPropagation());
+  document.getElementById('lightbox-caption').addEventListener('click', (e) => e.stopPropagation());
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display === 'flex') {
+      if (e.key === 'ArrowLeft') changeImage(-1);
+      if (e.key === 'ArrowRight') changeImage(1);
+      if (e.key === 'Escape') closeLightbox();
+    }
+  });
+
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  lightbox.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX;
+  });
+
+  lightbox.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX;
+    if (touchendX < touchstartX - 50) changeImage(1);
+    if (touchendX > touchstartX + 50) changeImage(-1);
+  });
+</script>

@@ -1,0 +1,136 @@
+---
+import '../styles/main.scss';
+import { SITE_TITLE, SITE_EMAIL } from '../consts';
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+const pathname = Astro.url.pathname;
+
+let section = 'home';
+if (pathname === '/') section = 'home';
+else if (pathname.startsWith('/blog')) section = 'archives';
+else if (pathname.startsWith('/projects')) section = 'projects';
+else if (pathname.startsWith('/drawings')) section = 'drawings';
+else if (pathname.startsWith('/pictures')) section = 'pictures';
+else if (pathname.startsWith('/about')) section = 'about';
+
+const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
+---
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageTitle}</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/images/hicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <a href="/" class="logo">
+      <span class="ascii-logo">
+_      _____ _____ _   _  _____  _____  _____  _   __
+| |    |  ___|  ___| | | ||  _  ||  ___||  _  || | / /
+| |    | |__ | |__ | |_| || | | ||  __  | | | || |/ /
+| |    |  __||  __||  _  || | | ||  __| | | | ||    \
+| |____| |___| |___| | | |\ \_/ /| |___ \ \_/ /| |\  \
+\_____/\____/\____/\_| |_/ \___/ \____/  \___/ \_| \_/
+      </span>
+      <span class="prompt-logo">leehoseok@{section}><span class="cursor"></span></span>
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Curtain -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/blog" class="nav-item">/archive</a>
+    <a href="/projects" class="nav-item">/project</a>
+    <a href="/drawings" class="nav-item">/drawing</a>
+    <a href="/pictures" class="nav-item">/picture</a>
+    <a href="/about" class="nav-item">/about</a>
+    <a href={`mailto:${SITE_EMAIL}`} class="nav-item">/contact</a>
+  </nav>
+
+  <div class="wrapper">
+    <!-- Desktop Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="logo">
+          <a href="/">
+            <span class="ascii-logo">
+ _      _____ _____ _   _  _____  _____  _____  _   __
+| |    |  ___|  ___| | | ||  _  ||  ___||  _  || | / /
+| |    | |__ | |__ | |_| || | | || |__  | | | || |/ /
+| |    |  __||  __||  _  || | | ||  __| | | | ||    \
+| |____| |___| |___| | | |\ \_/ /| |___ \ \_/ /| |\  \
+\_____/\____/\____/\_| |_/ \___/ \____/  \___/ \_| \_/
+            </span>
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li class={pathname.startsWith('/blog') ? 'active' : ''}><a href="/blog">/archive</a></li>
+          <li class={pathname.startsWith('/projects') ? 'active' : ''}><a href="/projects">/project</a></li>
+          <li class={pathname.startsWith('/drawings') ? 'active' : ''}><a href="/drawings">/drawing</a></li>
+          <li class={pathname.startsWith('/pictures') ? 'active' : ''}><a href="/pictures">/picture</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="/about" class="nav-item">/about</a>
+        <a href={`mailto:${SITE_EMAIL}`} class="nav-item">/contact</a>
+
+        <div class="personal-signature">
+          commit. push. pray.
+          crafted by leehoseok
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <slot />
+
+      <!-- Mobile Footer -->
+      <footer class="mobile-footer">
+        <div class="personal-signature">
+          commit. push. pray.
+          crafted by leehoseok
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger?.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileNav?.classList.toggle('active');
+    });
+
+    document.addEventListener('click', function(e) {
+      if (mobileNav?.classList.contains('active') && !mobileNav.contains(e.target as Node)) {
+        mobileNav.classList.remove('active');
+      }
+    });
+
+    mobileNav?.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

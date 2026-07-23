@@ -1,0 +1,114 @@
+---
+import Default from '../layouts/Default.astro';
+---
+
+<Default title="Home">
+  <h1 class="section-title">
+    leehoseok@home><span class="cursor"></span>
+  </h1>
+
+  <div class="terminal-content">
+    <div id="swift-code" class="swift-code-container"></div>
+  </div>
+
+  <script>
+    const codeSnippet = [
+      { text: 'import ', isKeyword: true }, { text: 'SwiftUI\n', isWhite: true },
+      { text: 'import ', isKeyword: true }, { text: 'AI\n\n', isWhite: true },
+      { text: 'struct ', isKeyword: true }, { text: 'Developer', isWhite: true }, { text: ' {\n' },
+      { text: '    let ', isKeyword: true }, { text: 'name', isWhite: true }, { text: ' = ' }, { text: '"leehoseok"', isString: true }, { text: '\n' },
+      { text: '    var ', isKeyword: true }, { text: 'style', isWhite: true }, { text: ' = ' }, { text: 'UI', isType: true }, { text: '.minimal\n' },
+      { text: '    var ', isKeyword: true }, { text: 'obsession', isWhite: true }, { text: ' = ' }, { text: 'Int', isType: true }, { text: '.max\n' },
+      { text: '}\n\n' },
+      { text: 'guard ', isKeyword: true }, { text: 'motivation', isWhite: true, isErrorTarget: true }, { text: ' ' }, { text: 'else ', isKeyword: true }, { text: '{\n', error: "Cannot find 'motivation' in scope" },
+      { text: '    return ', isKeyword: true }, { text: 'sleep', isFunction: true }, { text: '()\n' },
+      { text: '}\n\n' },
+      { text: 'while', isKeyword: true }, { text: '(', isWhite: true }, { text: 'idea', isWhite: true, isErrorTarget: true }, { text: ') {\n', error: "Cannot find 'idea' in scope" },
+      { text: '    ' }, { text: 'AI', isType: true }, { text: '.' }, { text: 'build', isFunction: true }, { text: '()\n' },
+      { text: '}' }
+    ];
+
+    const container = document.getElementById('swift-code')!;
+    const titleCursor = document.querySelector('.section-title .cursor') as HTMLElement | null;
+
+    const movingCursor = document.createElement('span');
+    movingCursor.className = 'cursor';
+
+    let currentPartIndex = 0;
+    let currentCharIndex = 0;
+
+    function typeCode() {
+      if (currentPartIndex < codeSnippet.length) {
+        if (currentPartIndex === 0 && currentCharIndex === 0 && titleCursor) {
+          titleCursor.style.visibility = 'hidden';
+        }
+
+        const part: any = codeSnippet[currentPartIndex];
+        let currentLineElement = container.querySelector('.code-line:last-of-type') as HTMLElement | null;
+
+        if (!currentLineElement) {
+          currentLineElement = document.createElement('div');
+          currentLineElement.className = 'code-line';
+          container.appendChild(currentLineElement);
+        }
+
+        if (movingCursor.parentNode !== currentLineElement) {
+          currentLineElement.appendChild(movingCursor);
+        }
+
+        let currentSpan: HTMLElement;
+        if (currentCharIndex === 0) {
+          currentSpan = document.createElement('span');
+          if (part.isKeyword) currentSpan.className = 'keyword';
+          if (part.isString) currentSpan.className = 'string';
+          if (part.isType) currentSpan.className = 'type';
+          if (part.isFunction) currentSpan.className = 'function';
+          if (part.isWhite) currentSpan.className = 'white';
+          if (part.isErrorTarget) currentSpan.classList.add('is-error-target');
+          currentLineElement.insertBefore(currentSpan, movingCursor);
+        } else {
+          currentSpan = movingCursor.previousSibling as HTMLElement;
+        }
+
+        const char = part.text[currentCharIndex];
+        if (char === '\n') {
+          if (part.error) currentLineElement.dataset.error = part.error;
+
+          const nextLine = document.createElement('div');
+          nextLine.className = 'code-line';
+          container.appendChild(nextLine);
+          nextLine.appendChild(movingCursor);
+        } else {
+          currentSpan.textContent += char;
+        }
+
+        currentCharIndex++;
+        if (currentCharIndex >= part.text.length) {
+          currentPartIndex++;
+          currentCharIndex = 0;
+        }
+
+        setTimeout(typeCode, Math.random() * 20 + 15);
+      } else {
+        setTimeout(showErrors, 3000);
+      }
+    }
+
+    function showErrors() {
+      document.querySelectorAll('.is-error-target').forEach(el => {
+        el.classList.add('error-underline');
+      });
+
+      document.querySelectorAll('.code-line[data-error]').forEach(line => {
+        line.classList.add('is-error');
+
+        const errorMsg = document.createElement('span');
+        errorMsg.className = 'error-message';
+        errorMsg.innerHTML = `<span class="error-icon"></span>${(line as HTMLElement).dataset.error}`;
+        line.appendChild(errorMsg);
+      });
+    }
+
+    window.onload = typeCode;
+  </script>
+</Default>

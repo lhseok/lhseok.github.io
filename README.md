@@ -1,7 +1,7 @@
 # 이호석 (lhseok) 포트폴리오
 
 이곳은 이호석의 개인 포트폴리오 및 기술 아카이브 사이트입니다.
-[Jekyll](https://jekyllrb.com/)을 기반으로 구축되었으며, 경력 사항, 프로젝트 경험, 그리고 개인적인 기록들을 담고 있습니다.
+[Astro](https://astro.build/)를 기반으로 구축되었으며, 경력 사항, 프로젝트 경험, 그리고 개인적인 기록들을 담고 있습니다.
 
 ## 바로가기
 
@@ -17,14 +17,17 @@
 
 ## 로컬 실행 방법
 
-이 프로젝트를 로컬에서 실행하려면 Ruby와 Jekyll이 설치되어 있어야 합니다.
+이 프로젝트를 로컬에서 실행하려면 Node.js가 설치되어 있어야 합니다.
 
 ```bash
 # 의존성 설치
-bundle install
+npm install
 
-# 서버 실행
-bundle exec jekyll serve
+# 개발 서버 실행
+npm run dev
+
+# 정적 빌드
+npm run build
 ```
 
 ---

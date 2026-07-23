@@ -1,0 +1,33 @@
+---
+import Default from './Default.astro';
+
+interface Props {
+  title: string;
+  tags: string[];
+  pubDate: Date;
+}
+
+const { title, tags, pubDate } = Astro.props;
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<Default title={title}>
+  <article class="post">
+    <header class="post-header">
+      <div class="post-date">{formatDate(pubDate)}</div>
+      <h1 class="post-title">{title}</h1>
+      <div class="post-tags">
+        {tags.map(tag => (
+          <a href={`/blog?tag=${tag}`} class="tag-item">#{tag}</a>
+        ))}
+      </div>
+    </header>
+
+    <div class="post-content">
+      <slot />
+    </div>
+  </article>
+</Default>
