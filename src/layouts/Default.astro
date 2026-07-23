@@ -11,7 +11,7 @@ const pathname = Astro.url.pathname;
 
 let section = 'home';
 if (pathname === '/') section = 'home';
-else if (pathname.startsWith('/blog')) section = 'archives';
+else if (pathname.startsWith('/blog')) section = 'blog';
 else if (pathname.startsWith('/projects')) section = 'projects';
 else if (pathname.startsWith('/drawings')) section = 'drawings';
 else if (pathname.startsWith('/pictures')) section = 'pictures';
@@ -54,7 +54,7 @@ _      _____ _____ _   _  _____  _____  _____  _   __
 
   <!-- Mobile Navigation Curtain -->
   <nav class="mobile-nav" id="mobileNav">
-    <a href="/blog" class="nav-item">/archive</a>
+    <a href="/blog" class="nav-item">/blog</a>
     <a href="/projects" class="nav-item">/project</a>
     <a href="/drawings" class="nav-item">/drawing</a>
     <a href="/pictures" class="nav-item">/picture</a>
@@ -79,7 +79,7 @@ _      _____ _____ _   _  _____  _____  _____  _   __
           </a>
         </div>
         <ul class="nav-menu">
-          <li class={pathname.startsWith('/blog') ? 'active' : ''}><a href="/blog">/archive</a></li>
+          <li class={pathname.startsWith('/blog') ? 'active' : ''}><a href="/blog">/blog</a></li>
           <li class={pathname.startsWith('/projects') ? 'active' : ''}><a href="/projects">/project</a></li>
           <li class={pathname.startsWith('/drawings') ? 'active' : ''}><a href="/drawings">/drawing</a></li>
           <li class={pathname.startsWith('/pictures') ? 'active' : ''}><a href="/pictures">/picture</a></li>

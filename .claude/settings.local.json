@@ -14,7 +14,9 @@
       "Bash(npm -v)",
       "Bash(lsof -nP -iTCP -sTCP:LISTEN)",
       "Bash(curl -s http://localhost:4321/)",
-      "Bash(curl -sI http://localhost:4321/assets/images/favicon.png)"
+      "Bash(curl -sI http://localhost:4321/assets/images/favicon.png)",
+      "Bash(curl -s http://localhost:4321/about)",
+      "Bash(curl -s http://localhost:4321/blog)"
     ]
   }
 }

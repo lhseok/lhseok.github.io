@@ -111,7 +111,10 @@ ul {
   display: block;
   margin-bottom: 10px;
   font-size: 14px;
+  font-weight: 500;
   color: $text-muted;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: -0.02em;
 }
 
 .personal-signature {

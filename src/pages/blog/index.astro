@@ -22,9 +22,9 @@ const postsByYear = allPosts.reduce<Record<string, typeof allPosts>>((acc, post)
 const years = Object.keys(postsByYear).sort((a, b) => b.localeCompare(a));
 ---
 
-<Default title="Archives">
+<Default title="Blog">
   <h1 class="section-title">
-    leehoseok@archives><span class="cursor"></span>
+    leehoseok@blog><span class="cursor"></span>
   </h1>
 
   <div id="filter-status" style="margin-bottom: 20px; display: none; align-items: center; gap: 15px;">
