@@ -10,7 +10,11 @@
       "Bash(figlet -f banner3 \"LEEMILY\")",
       "Bash(rsync *)",
       "Bash(bundle exec *)",
-      "Bash(bundle install *)"
+      "Bash(bundle install *)",
+      "Bash(npm -v)",
+      "Bash(lsof -nP -iTCP -sTCP:LISTEN)",
+      "Bash(curl -s http://localhost:4321/)",
+      "Bash(curl -sI http://localhost:4321/assets/images/favicon.png)"
     ]
   }
 }
