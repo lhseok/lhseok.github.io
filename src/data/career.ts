@@ -16,7 +16,7 @@ export const career: CareerItem[] = [
     company: '더블유컨셉코리아',
     period: '2024.05 - 2026.06',
     role: 'iOS 앱 개발 및 유지보수',
-    position: '매니저',
+    position: '프리랜서',
     projects: [
       {
         title: '쇼핑 AI 에이전트 인터랙션 개발',
