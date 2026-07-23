@@ -14,7 +14,7 @@ export interface CareerItem {
 export const career: CareerItem[] = [
   {
     company: '더블유컨셉코리아',
-    period: '2024.05 - 재직중',
+    period: '2024.05 - 2026.06',
     role: 'iOS 앱 개발 및 유지보수',
     position: '매니저',
     projects: [
